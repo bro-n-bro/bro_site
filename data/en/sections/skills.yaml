@@ -1,0 +1,42 @@
+# section information
+section:
+  name: Networks
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Bostrom
+  logo: "/images/sections/skills/boot.png"
+  summary: "Broken link inside"
+  url: "https://kubernetes.io/"
+
+- name: Juno
+  logo: "/images/sections/skills/juno.svg"
+  summary: "Broken link inside"
+  url: "https://golang.org/"
+
+- name: Osmosis
+  logo: "/images/sections/skills/osmo.svg"
+  summary: "Broken link inside"
+  url: "https://golang.org/"
+
+- name: E-money
+  logo: "/images/sections/skills/ngm.svg"
+  summary: "Broken link inside"
+  url: "https://golang.org/"
+
+- name: Microtick
+  logo: "/images/sections/skills/tick.svg"
+  summary: "Broken link inside"
+  url: "https://golang.org/"
+
+- name: Stargaze
+  logo: "/images/sections/skills/star.svg"
+  summary: "Broken link inside"
+  url: "https://golang.org/"
