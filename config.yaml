@@ -1,4 +1,4 @@
-baseURL: https://bro-n-bro.github.io/bro_site/
+baseURL: https://bro-n-bro.github.io
 
 languageCode: en-us
 title: "Bro-n-bro validator"
@@ -24,7 +24,7 @@ enableEmoji: true
 # Site parameters
 params:
   # GitHub repo URL of your site
-  gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
+  gitRepo: https://github.com/bro-n-bro
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
@@ -36,7 +36,8 @@ params:
   # Currently, you can just hide it from the footer.
   newsletter:
     enable: false
-  background: "images/background.jpeg"
+
+  background: "images/background.jpg"
 
   logo:
     main: images/main-logo.png
