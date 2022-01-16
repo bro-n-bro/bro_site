@@ -1,4 +1,4 @@
-baseURL: 'https://bro-n-bro.github.io/bro_site/'
+baseURL: https://bro-n-bro.github.io/bro_site
 
 languageCode: en-us
 title: "Bro-n-bro validator"
@@ -37,7 +37,7 @@ params:
   newsletter:
     enable: false
 
-  background: "images/background.jpg"
+  background: "images/site/background.jpg"
 
   logo:
     main: images/main-logo.png
