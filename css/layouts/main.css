@@ -14,7 +14,7 @@ Yellow:  #FFC212
 */
 
 body {
-  background-color: #f9fafc;
+  background-color: #000000;
   font-family: "Muli";
 }
 
@@ -296,7 +296,7 @@ mark {
 
 .footer {
   color: #8392a5 !important;
-  background-color: #1c2d41;
+  background-color: #000000;
   position: relative;
   z-index: 9999;
 }
