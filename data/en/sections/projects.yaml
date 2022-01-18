@@ -22,6 +22,8 @@ buttons:
   filter: "stargaze"
 - name: Microtick
   filter: "stargaze"
+- name: Cosmos
+  filter: "cosmos"
 
 # your projects
 projects:
@@ -50,3 +52,11 @@ projects:
   repo: https://github.com/bro-n-bro/osmopy
   summary: Tools for Osmosis wallet management and offline transaction signing
   tags: ["osmosis"]
+
+- name: relaying
+  # logo: /images/sections/projects/toha.png
+  # role: Owner
+  # timeline: "Jun 2019 - Present"
+  # repo: https://github.com/bro-n-bro/osmopy
+  summary: IBC relaying support
+  tags: ["osmosis", "bostrom", "cosmos"]
