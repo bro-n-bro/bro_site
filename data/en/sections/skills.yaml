@@ -13,30 +13,30 @@ section:
 skills:
 - name: Bostrom
   logo: "/images/sections/skills/boot.png"
-  summary: "Broken link inside"
-  url: "https://kubernetes.io/"
+  summary: "The Genesis validator of the Bostrom network. The element of the Dyson Sphere. We're here to unleash the power of the Great Web."
+  url: "https://cyb.ai/network/bostrom/hero/bostromvaloper1ydc5fy9fjdygvgw36u49yj39fr67pd9m5qexm8"
 
 - name: Juno
   logo: "/images/sections/skills/juno.svg"
-  summary: "Broken link inside"
-  url: "https://golang.org/"
+  summary: "Do we believe in smart contracts' superiority? Yes, we do! That's why we're here."
+  url: "https://juno.disperze.network/validators/junovaloper1quqxfrxkycr0uzt4yk0d57tcq3zk7srm7sm6r8"
 
 - name: Osmosis
   logo: "/images/sections/skills/osmo.svg"
-  summary: "Broken link inside"
-  url: "https://golang.org/"
+  summary: "The Great liquidity accelerator for any cosmos-based project as for very cosmos ecosystem. We have to be a part of that!"
+  url: "https://wallet.keplr.app/#/osmosis/stake?modal=stake&chainId=osmosis-1&validator=osmovaloper13tk45jkxgf7w0nxquup3suwaz2tx483xe832ge"
 
-- name: E-money
-  logo: "/images/sections/skills/ngm.svg"
-  summary: "Broken link inside"
-  url: "https://golang.org/"
+# - name: E-money
+#   logo: "/images/sections/skills/ngm.svg"
+#   summary: "Broken link inside"
+#   url: "https://golang.org/"
 
 - name: Microtick
   logo: "/images/sections/skills/tick.svg"
-  summary: "Broken link inside"
-  url: "https://golang.org/"
+  summary: "Cooperative price discovery. Real-time and decentralized. Independently tradeable. No front running. We're in!"
+  url: "https://microtick.ezstaking.io/validators/microvaloper13mkjrr578sxd7whex3mqru96vdt3tttw63uwtd"
 
 - name: Stargaze
   logo: "/images/sections/skills/star.svg"
-  summary: "Broken link inside"
-  url: "https://golang.org/"
+  summary: "We love NFTs! "
+  url: "https://stake.stargaze.zone/stake"

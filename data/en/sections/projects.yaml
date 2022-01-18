@@ -9,67 +9,44 @@ section:
   # hideTitle: true
 
 # filter buttons
-# buttons:
-# - name: All
-#   filter: "all"
-# - name: Professional
-#   filter: "professional"
-# - name: Academic
-#   filter: "academic"
-# - name: Hobby
-#   filter: "hobby"
+buttons:
+- name: All
+  filter: "all"
+- name: Osmosis
+  filter: "osmosis"
+- name: Juno
+  filter: "juno"
+- name: Bostrom
+  filter: "bostrom"
+- name: Stargaze
+  filter: "stargaze"
+- name: Microtick
+  filter: "stargaze"
 
 # your projects
 projects:
-- name: Monitoring
+- name: monitoring
   # logo: /images/sections/projects/kubernetes.png
   # role: Contributor
   # timeline: "March 2018 - Present"
   # repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
   url: "https://monitor.bronbro.io/"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: blablalba
-  tags: []
+  summary: Providing all necessary data in Grafana minimalism.
+  tags: ["osmosis", "juno", "bostrom", "stargaze", "stargaze"]
 
-- name: Bro-rating
+- name: bro-rating
   # logo: /images/sections/projects/tensorflow.png
   # role: Developer
   # timeline: "Jun 2018 - Present"
   repo: https://github.com/bro-n-bro/bro_rating
-  #url: ""
-  summary: blablalba
-  tags: []
+  # url: ""
+  summary: The clear view on cosmos ecosystem validators
+  tags: ["osmosis"]
 
 - name: osmopy
   # logo: /images/sections/projects/toha.png
   # role: Owner
   # timeline: "Jun 2019 - Present"
   repo: https://github.com/bro-n-bro/osmopy
-  summary: blablabla
-  tags: []
-
-- name: Kubernetes
-  logo: images/projects/kubernetes.png
-  role: Contributor
-  timeline: "March 2018 - Present"
-  repo: https://github.com/kubernetes/kubernetes
-  # url: ""
-  summary: Production-Grade Container Scheduling and Management .
-  tags: ["professional", "kubernetes", "cloud"]
-
-- name: Kubernetes
-  logo: images/projects/kubernetes.png
-  role: Contributor
-  timeline: "March 2018 - Present"
-  repo: https://github.com/kubernetes/kubernetes
-  # url: ""
-  summary: Production-Grade Container Scheduling and Management .
-  tags: ["professional", "kubernetes", "cloud"]
-
-- name: Kubernetes
-  logo: images/projects/kubernetes.png
-  role: Contributor
-  timeline: "March 2018 - Present"
-  repo: https://github.com/kubernetes/kubernetes
-  # url: ""
-  summary: Production-Grade Container Scheduling and Management .
-  tags: ["professional", "kubernetes", "cloud"]
+  summary: Tools for Osmosis wallet management and offline transaction signing
+  tags: ["osmosis"]
