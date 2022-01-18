@@ -27,7 +27,7 @@ params:
   gitRepo: https://github.com/bro-n-bro
 
   # specify whether you want to write some blog posts or not
-  enableBlogPost: true
+  enableBlogPost: False
 
   # specify whether you want to show Table of Contents in reading page
   enableTOC: true
