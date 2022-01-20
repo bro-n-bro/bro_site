@@ -1,0 +1,17 @@
+# section information
+section:
+  name: Coming soon
+  id: skills
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+# skills:
+# - name: Bostrom
+#   logo: "/images/sections/skills/boot.png"
+#   summary: "The Genesis validator of the Bostrom network. The element of the Dyson Sphere. We're here to unleash the power of the Great Web."
+#   url: "https://cyb.ai/network/bostrom/hero/bostromvaloper1ydc5fy9fjdygvgw36u49yj39fr67pd9m5qexm8"

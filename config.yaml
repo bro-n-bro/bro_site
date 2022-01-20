@@ -1,7 +1,7 @@
 baseURL: https://bro-n-bro.github.io/bro_site
 
 languageCode: en-us
-title: "Bro-n-bro validator"
+title: "Bro-n-bro"
 theme: "toha"
 
 # Manage languages
@@ -27,7 +27,7 @@ params:
   gitRepo: https://github.com/bro-n-bro
 
   # specify whether you want to write some blog posts or not
-  enableBlogPost: False
+  enableBlogPost: true
 
   # specify whether you want to show Table of Contents in reading page
   enableTOC: true
