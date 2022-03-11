@@ -1,10 +1,10 @@
 # section information
-section:
-  name: Testnets
-  id: skills
-  enable: true
-  weight: 3
-  showOnNavbar: true
+# section:
+#   name: Testnets
+#   id: skills
+#   enable: true
+#   weight: 3
+#   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
 

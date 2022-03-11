@@ -1,10 +1,10 @@
 # section information
-section:
-  name: Coming soon
-  id: skills
-  enable: true
-  weight: 4
-  showOnNavbar: true
+# section:
+#   name: Coming soon
+#   id: skills
+#   enable: true
+#   weight: 4
+#   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
 

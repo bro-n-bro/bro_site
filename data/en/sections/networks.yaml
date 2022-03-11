@@ -40,3 +40,18 @@ skills:
   logo: "/images/sections/skills/star.svg"
   summary: "We love NFTs! "
   url: "https://wallet.keplr.app/#/stargaze/stake?modal=stake&chainId=stargaze-1&validator=starsvaloper1y58hfnm90r4efhlydx0gavz57lvm7k6uulkg3h"
+
+- name: Evmos
+  logo: "/images/sections/skills/evmos.svg"
+  summary: "EVM inside Cosmos ecosystem. Awesome!"
+  url: "https://golang.org/"
+
+- name: Gravity-bridge
+  logo: "/images/sections/skills/grav.svg"
+  summary: "The bridge. Finally. We're in."
+  url: "https://microtick.ezstaking.io/validators/microvaloper13mkjrr578sxd7whex3mqru96vdt3tttw63uwtd"
+
+- name: Omniflix
+  logo: "/images/sections/skills/omni.png"
+  summary: "We love NFTs! "
+  url: "https://wallet.keplr.app/#/stargaze/stake?modal=stake&chainId=stargaze-1&validator=starsvaloper1y58hfnm90r4efhlydx0gavz57lvm7k6uulkg3h"
