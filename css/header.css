@@ -1,0 +1,256 @@
+header
+{
+    z-index: 5;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+header.absolute
+{
+    position: absolute;
+
+    margin: 0;
+}
+
+
+header .cont
+{
+    max-width: 1326px;
+}
+
+
+header .info
+{
+    padding: 19px;
+
+    border: 1px solid #191919;
+    border-radius: 42px;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+header .logo img
+{
+    display: block;
+
+    max-width: 100%;
+}
+
+
+
+header .menu
+{
+    margin-left: auto;
+}
+
+
+header .menu_item + .menu_item
+{
+    margin-left: 2px;
+}
+
+
+header .menu_item .btn
+{
+    color: rgba(255, 255, 255, .8);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+
+    display: block;
+
+    padding: 13px 20px;
+
+    transition: .2s linear;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+
+header .menu_item:hover > .btn,
+header .menu_item > .btn.active
+{
+    color: #fff;
+
+    background: #101010;
+}
+
+
+
+header .ipfs_status
+{
+    color: #eb5757;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+
+    position: relative;
+
+    margin-right: 20px;
+    margin-left: 22px;
+    padding-left: 21px;
+
+    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+header .ipfs_status.grren
+{
+    color: #1bc562;
+}
+
+header .ipfs_status:before
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 11px;
+    height: 11px;
+    margin: auto;
+
+    content: '';
+
+    border-radius: 50%;
+    background: currentColor;
+}
+
+
+
+@media print,
+(max-width: 1439px)
+{
+    header .cont
+    {
+        padding: 0 20px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    header
+    {
+        margin-bottom: 40px;
+    }
+
+
+    header .info
+    {
+        padding: 15px;
+
+        border-radius: 32px;
+    }
+
+
+    header .cont
+    {
+        padding: 0 16px;
+    }
+
+
+    header .logo img
+    {
+        height: 64px;
+    }
+
+
+    header .menu_item .btn
+    {
+        font-size: 14px;
+
+        padding: 12px 20px;
+
+        border-radius: 13px;
+    }
+
+
+    header .ipfs_status
+    {
+        font-size: 14px;
+
+        margin-right: 16px;
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    header .info
+    {
+        padding: 11px;
+    }
+
+
+    header .cont
+    {
+        padding: 0 12px;
+    }
+
+
+    header .menu
+    {
+        display: none;
+    }
+
+
+    header .ipfs_status
+    {
+        margin-right: 24px;
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    header
+    {
+        margin-bottom: 36px;
+    }
+
+
+    header .logo img
+    {
+        height: 60px;
+    }
+}
+
+
+
+@media print,
+(max-width: 479px)
+{
+    header
+    {
+        margin-bottom: 32px;
+        padding: 12px 0;
+    }
+
+
+    header .logo img
+    {
+        height: 52px;
+    }
+}

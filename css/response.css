@@ -1,0 +1,953 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size: 15px;
+        --font_size_title: 46px;
+    }
+
+
+
+    /*--------------
+        All link
+    --------------*/
+    .all_link
+    {
+        margin-top: 40px;
+    }
+
+
+    .all_link a
+    {
+        padding: 16px 28px;
+    }
+
+
+
+    /*-----------
+        Block
+    -----------*/
+    .block .data
+    {
+        padding: 72px 40px 56px;
+
+        border-radius: 50px;
+    }
+
+    .block .data:before
+    {
+        top: 28px;
+
+        width: 56px;
+        height: 6px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        margin-bottom: 48px;
+    }
+
+
+    .block_head .desc
+    {
+        width: calc(100% - 410px);
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        font-size: 19px;
+    }
+
+
+    .text_block > *
+    {
+        margin-bottom: 28px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats .data
+    {
+        padding: 0 52px 70px;
+    }
+
+
+    .stats .item
+    {
+        font-size: 18px;
+    }
+
+
+    .stats .item .val
+    {
+        font-size: 48px;
+
+        margin-left: 36px;
+    }
+
+
+
+    /*------------
+        Whoami
+    ------------*/
+    .whoami .info
+    {
+        padding: 40px;
+    }
+
+
+    .whoami .title
+    {
+        margin-bottom: 28px;
+    }
+
+
+    .whoami .text
+    {
+        font-size: 17px;
+    }
+
+
+    .whoami .image
+    {
+        min-height: 500px;
+    }
+
+
+
+    /*--------------
+        Networks
+    --------------*/
+    .networks .item .name
+    {
+        font-size: 21px;
+    }
+
+
+    .networks .item .btn
+    {
+        line-height: 19px;
+
+        margin-top: 28px;
+        padding: 15px 32px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .row
+    {
+        margin-bottom: -12px;
+        margin-left: -12px;
+    }
+
+    .projects .row > *
+    {
+        width: calc(50% - 12px);
+        margin-bottom: 12px;
+        margin-left: 12px;
+    }
+
+
+    .projects .project
+    {
+        padding: 28px 28px 0;
+    }
+
+
+    .projects .project .link a
+    {
+        padding: 16px 28px;
+    }
+
+
+    .projects .project .thumb img
+    {
+        left: -28px;
+
+        width: calc(100% + 56px);
+    }
+
+
+
+    /*----------
+        Blog
+    ----------*/
+    .blog .item .title
+    {
+        font-size: 20px;
+    }
+
+
+
+    /*--------------
+        Contacts
+    --------------*/
+    .contacts .socials a + a
+    {
+        margin-left: 28px;
+    }
+
+
+    .contacts .socials svg
+    {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size: 15px;
+        --font_size_title: 40px;
+    }
+
+
+
+    /*--------------
+        All link
+    --------------*/
+    .all_link a
+    {
+        padding: 14px 28px;
+
+        border-radius: 16px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .block_head .title
+    {
+        width: 300px;
+    }
+
+
+    .block_head .desc
+    {
+        width: calc(100% - 328px);
+    }
+
+
+
+    /*-----------
+        Block
+    -----------*/
+    .block .data
+    {
+        padding: 60px 32px 44px;
+
+        border-radius: 40px;
+    }
+
+    .block .data:before
+    {
+        width: 52px;
+        height: 5px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        font-size: 18px;
+    }
+
+
+    .text_block > *
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats
+    {
+        margin-bottom: -60px;
+    }
+
+
+    .stats .data
+    {
+        padding: 0 32px 60px;
+    }
+
+
+    .stats .sep
+    {
+        height: 120px;
+    }
+
+
+    .stats .item
+    {
+        font-size: 17px;
+    }
+
+    .stats .item .val
+    {
+        font-size: 44px;
+
+        margin-left: 28px;
+    }
+
+
+
+    /*------------
+        Whoami
+    ------------*/
+    .whoami .info
+    {
+        padding: 32px;
+
+        border-radius: 32px;
+    }
+
+
+    .whoami .title
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .whoami .text
+    {
+        font-size: 15px;
+    }
+
+
+    .whoami .image
+    {
+        min-height: 488px;
+
+        border-radius: 32px;
+    }
+
+
+
+    /*--------------
+        Networks
+    --------------*/
+    .networks .item .name
+    {
+        font-size: 19px;
+        line-height: 23px;
+
+        width: calc(100% - 148px);
+    }
+
+
+    .networks .item .apr
+    {
+        font-size: 13px;
+        line-height: 17px;
+
+        width: 84px;
+        padding: 8px 12px;
+    }
+
+    .networks .item .apr span
+    {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+
+    .networks .item .btn
+    {
+        line-height: 17px;
+
+        padding: 14px 28px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .project
+    {
+        padding: 24px 24px 0;
+
+        border-radius: 32px;
+    }
+
+
+    .projects .project .link a
+    {
+        padding: 14px 24px;
+
+        border-radius: 16px;
+    }
+
+
+    .projects .project .thumb
+    {
+        padding-bottom: 77.75%;
+    }
+
+    .projects .project .thumb img
+    {
+        left: -24px;
+
+        width: calc(100% + 48px);
+    }
+
+
+
+    /*----------
+        Blog
+    ----------*/
+    .blog .item .title
+    {
+        font-size: 19px;
+    }
+
+
+
+    /*--------------
+        Contacts
+    --------------*/
+    .contacts .socials a + a
+    {
+        margin-left: 24px;
+    }
+
+
+    .contacts .socials svg
+    {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size: 14px;
+        --font_size_title: 36px;
+    }
+
+
+
+    /*-----------
+        Block
+    -----------*/
+    .block .data
+    {
+        padding: 60px 24px 40px;
+
+        border-radius: 36px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        padding: 0 16px;
+    }
+
+
+    .block_head .title
+    {
+        width: 100%;
+    }
+
+    .block_head .title br
+    {
+        display: none;
+    }
+
+
+    .block_head .desc
+    {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        font-size: 17px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats
+    {
+        margin-bottom: -50px;
+    }
+
+
+    .stats .data
+    {
+        padding: 0 24px 52px;
+
+        border-radius: 48px 48px 0 0;
+    }
+
+
+    .stats .sep
+    {
+        height: 153px;
+    }
+
+
+    .stats .item
+    {
+        font-size: 16px;
+
+        text-align: center;
+    }
+
+    .stats .item > *
+    {
+        width: 100%;
+
+        order: 2;
+    }
+
+    .stats .item .val
+    {
+        font-size: 40px;
+
+        width: 100%;
+        margin-bottom: 12px;
+        margin-left: 0;
+
+        text-align: center;
+
+        order: 1;
+    }
+
+
+
+    /*------------
+        Whoami
+    ------------*/
+    .whoami .info
+    {
+        width: 100%;
+        padding: 28px;
+    }
+
+
+    .whoami .text > * + *
+    {
+        margin-top: 20px;
+    }
+
+
+    .whoami .image
+    {
+        width: 100%;
+        min-height: 388px;
+        margin-top: 10px;
+    }
+
+
+
+    /*--------------
+        Networks
+    --------------*/
+    .networks .row > *
+    {
+        width: calc(50% - 16px);
+    }
+
+
+
+    /*----------
+        Blog
+    ----------*/
+    .blog .row > *
+    {
+        width: calc(50% - 16px);
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size: 14px;
+        --font_size_title: 32px;
+    }
+
+
+
+    /*-----------
+        Block
+    -----------*/
+    .block .data
+    {
+        padding: 56px 24px 40px;
+
+        border-radius: 32px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        margin-bottom: 32px;
+    }
+
+    .block .data:before
+    {
+        top: 24px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats
+    {
+        margin-bottom: -40px;
+    }
+
+
+    .stats .data
+    {
+        padding: 32px 48px 72px;
+
+        border-radius: 40px 40px 0 0;
+    }
+
+
+    .stats .sep
+    {
+        width: 100%;
+        height: 2px;
+        margin: 20px auto;
+    }
+
+
+    .stats .item
+    {
+        font-size: 15px;
+
+        width: 100%;
+
+        text-align: left;
+
+        justify-content: space-between;
+    }
+
+    .stats .item > *
+    {
+        width: auto;
+
+        order: 0;
+    }
+
+
+    .stats .item .val
+    {
+        width: auto;
+        margin-bottom: 0;
+        margin-left: 28px;
+
+        order: 0;
+    }
+
+
+
+    /*------------
+        Whoami
+    ------------*/
+    .whoami .info
+    {
+        padding: 24px;
+
+        border-radius: 28px;
+    }
+
+
+    .whoami .text
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*--------------
+        Networks
+    --------------*/
+    .networks .row
+    {
+        margin-bottom: -12px;
+        margin-left: 0;
+    }
+
+    .networks .row > *
+    {
+        width: 100%;
+        margin-bottom: 12px;
+        margin-left: 0;
+    }
+
+    .networks .row > *.mob_margin
+    {
+        margin-top: 20px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .project
+    {
+        border-radius: 28px;
+    }
+
+
+    .projects .row
+    {
+        margin-left: 0;
+    }
+
+    .projects .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*----------
+        Blog
+    ----------*/
+    .blog .row
+    {
+        margin-left: 0;
+    }
+
+    .blog .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .blog .item .title
+    {
+        font-size: 18px;
+    }
+
+
+
+    /*--------------
+        Contacts
+    --------------*/
+    .contacts .block_head
+    {
+        width: 100%;
+        margin-bottom: 28px;
+
+        text-align: center;
+    }
+
+
+    .contacts .block_head .title
+    {
+        width: 100%;
+    }
+
+    .contacts .block_head .title br
+    {
+        display: none;
+    }
+
+
+    .contacts .socials
+    {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .contacts .socials a + a
+    {
+        margin-left: 20px;
+    }
+
+    .contacts .socials svg
+    {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+
+
+@media print,
+(max-width: 479px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size: 14px;
+        --font_size_title: 28px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        margin-bottom: 28px;
+        padding: 0;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*-----------
+        Stats
+    -----------*/
+    .stats .item .val
+    {
+        font-size: 38px;
+    }
+
+
+
+    /*------------
+        Whoami
+    ------------*/
+    .whoami .image
+    {
+        min-height: 308px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .project
+    {
+        padding: 24px 20px 0;
+
+        border-radius: 24px;
+    }
+
+
+    .projects .project .thumb img
+    {
+        left: -16px;
+
+        width: calc(100% + 32px);
+    }
+
+
+
+    /*----------
+        Blog
+    ----------*/
+    .blog .item .title
+    {
+        font-size: 17px;
+    }
+
+
+
+    /*--------------
+        Contacts
+    --------------*/
+    .contacts .socials a + a
+    {
+        margin-left: 16px;
+    }
+
+    .contacts .socials svg
+    {
+        width: 44px;
+        height: 44px;
+    }
+}
