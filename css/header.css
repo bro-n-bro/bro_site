@@ -1,3 +1,9 @@
+.header_wrap
+{
+    margin-bottom: 50px;
+}
+
+
 header
 {
     position: relative;
@@ -10,6 +16,11 @@ header
     padding: 20px 0;
 
     transition: .2s linear;
+}
+
+.header_wrap header
+{
+    margin: 0;
 }
 
 header.absolute
@@ -113,10 +124,11 @@ header .ipfs_status
     font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
-header .ipfs_status.grren
+header .ipfs_status.green
 {
     color: #1bc562;
 }
+
 
 header .ipfs_status:before
 {
@@ -335,6 +347,7 @@ header.fixed .logo img
 @media print,
 (max-width: 1279px)
 {
+    .header_wrap,
     header
     {
         margin-bottom: 40px;
@@ -424,6 +437,7 @@ header.fixed .logo img
 @media print,
 (max-width: 767px)
 {
+    .header_wrap,
     header
     {
         margin-bottom: 36px;
@@ -447,6 +461,12 @@ header.fixed .logo img
 @media print,
 (max-width: 479px)
 {
+    .header_wrap
+    {
+        margin-bottom: 32px;
+    }
+
+
     header
     {
         margin-bottom: 32px;

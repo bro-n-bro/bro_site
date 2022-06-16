@@ -2,12 +2,14 @@
 addStylesheetURL('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
 
 
+const mobMenuBtn = document.querySelector('header .mob_menu_btn'),
+	body = document.querySelector('body'),
+	mobMenu = document.querySelector('.mob_menu'),
+	header = document.querySelector('header'),
+	headerWrap = document.querySelector('.header_wrap')
+
+
 document.addEventListener("DOMContentLoaded", function () {
-	const mobMenuBtn = document.querySelector('header .mob_menu_btn'),
-		body = document.querySelector('body'),
-		mobMenu = document.querySelector('.mob_menu')
-
-
 	// Ширина окна для ресайза
 	WW = window.innerWidth
 
@@ -134,9 +136,13 @@ window.addEventListener('load', () => {
 	// Фикс. шапка
 	headerInit = true
 
+	if (headerWrap) {
+		headerWrap.style.height = header.clientHeight + 'px'
+	}
+
 	headerInit && window.scrollY > 0
-		? document.querySelector('header').classList.add('fixed')
-		: document.querySelector('header').classList.remove('fixed')
+		? header.classList.add('fixed')
+		: header.classList.remove('fixed')
 })
 
 
@@ -161,9 +167,14 @@ window.addEventListener('resize', () => {
 		setTimeout(() => {
 			headerInit = true
 
+			if (headerWrap) {
+				headerWrap.style.height = 'auto'
+				headerWrap.style.height = header.clientHeight
+			}
+
 			headerInit && window.scrollTop > 0
-				? document.querySelector('header').classList.add('fixed')
-				: document.querySelector('header').classList.remove('fixed')
+				? header.classList.add('fixed')
+				: header.classList.remove('fixed')
 		}, 100)
 
 
@@ -177,8 +188,8 @@ window.addEventListener('resize', () => {
 window.addEventListener('scroll', () => {
 	// Фикс. шапка
 	typeof headerInit !== 'undefined' && headerInit && window.scrollY > 0
-		? document.querySelector('header').classList.add('fixed')
-		: document.querySelector('header').classList.remove('fixed')
+		? header.classList.add('fixed')
+		: header.classList.remove('fixed')
 })
 
 
