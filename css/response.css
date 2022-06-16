@@ -121,7 +121,7 @@
 
     .whoami .text
     {
-        font-size: 17px;
+        font-size: 19px;
     }
 
 
@@ -202,6 +202,15 @@
     /*--------------
         Contacts
     --------------*/
+    .contacts .data:before
+    {
+        top: 0;
+
+        width: 1px;
+        height: 100%;
+    }
+
+
     .contacts .socials a + a
     {
         margin-left: 28px;
@@ -227,6 +236,13 @@
     {
         --font_size: 15px;
         --font_size_title: 40px;
+    }
+
+
+    html.custom_scroll ::-webkit-scrollbar
+    {
+        width: 5px;
+        height: 5px;
     }
 
 
@@ -311,6 +327,8 @@
     .stats .data
     {
         padding: 0 32px 60px;
+
+        border-radius: 40px 40px 0 0;
     }
 
 
@@ -329,7 +347,7 @@
     {
         font-size: 44px;
 
-        margin-left: 28px;
+        margin-left: 24px;
     }
 
 
@@ -353,7 +371,7 @@
 
     .whoami .text
     {
-        font-size: 15px;
+        font-size: 17px;
     }
 
 
@@ -449,6 +467,15 @@
     /*--------------
         Contacts
     --------------*/
+    .contacts .data:before
+    {
+        top: 0;
+
+        width: 1px;
+        height: 100%;
+    }
+
+
     .contacts .socials a + a
     {
         margin-left: 24px;
@@ -541,8 +568,6 @@
     .stats .data
     {
         padding: 0 24px 52px;
-
-        border-radius: 48px 48px 0 0;
     }
 
 
@@ -591,6 +616,12 @@
     }
 
 
+
+    .whoami .text
+    {
+        font-size: 16px;
+    }
+
     .whoami .text > * + *
     {
         margin-top: 20px;
@@ -622,6 +653,31 @@
     .blog .row > *
     {
         width: calc(50% - 16px);
+    }
+
+
+
+    /*--------------
+        Contacts
+    --------------*/
+    .contacts .data:before
+    {
+        top: 28px;
+
+        width: 52px;
+        height: 5px;
+    }
+
+
+    .contacts .socials svg
+    {
+        width: 52px;
+        height: 52px;
+    }
+
+    .contacts .socials a + a
+    {
+        margin-left: 20px;
     }
 }
 
@@ -736,7 +792,7 @@
 
     .whoami .text
     {
-        font-size: 14px;
+        font-size: 15px;
     }
 
 
@@ -858,6 +914,12 @@
     /*-------------------
         Global styles
     -------------------*/
+    *
+    {
+        scroll-margin-top: 68px;
+    }
+
+
     :root
     {
         --font_size: 14px;
@@ -900,6 +962,12 @@
     /*------------
         Whoami
     ------------*/
+    .whoami .text
+    {
+        font-size: 14px;
+    }
+
+
     .whoami .image
     {
         min-height: 308px;

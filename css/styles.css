@@ -27,6 +27,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    scroll-margin-top: 84px;
 }
 
 *:before,
@@ -171,20 +173,21 @@ html
 
 html.custom_scroll ::-webkit-scrollbar
 {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
 
-    background-color: #ccc;
+    background-color: var(--bg);
 }
 
 html.custom_scroll ::-webkit-scrollbar-thumb
 {
+    border-radius: 5px;
     background-color: #950fff;
 }
 
 html.custom_scroll
 {
-    scrollbar-color: #950fff #ccc;
+    scrollbar-color: #950fff var(--bg);
     scrollbar-width: thin;
 }
 
@@ -654,7 +657,7 @@ button
 
 .whoami .text
 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 170%;
 
@@ -829,6 +832,7 @@ button
 
 .networks .item .apr span
 {
+    color: #950fff;
     font-size: var(--font_size);
     font-weight: 600;
     line-height: 19px;
@@ -836,16 +840,6 @@ button
     margin-left: 6px;
 
     font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
-}
-
-.networks .item .apr .green
-{
-    color: #1bc562;
-}
-
-.networks .item .apr .red
-{
-    color: #eb5757;
 }
 
 
@@ -1089,7 +1083,8 @@ button
     padding-right: 100px;
     padding-left: 100px;
 
-    border-radius: 60px 60px 0 0;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
     background: #950fff;
 
     justify-content: space-between;
@@ -1098,12 +1093,29 @@ button
     flex-wrap: wrap;
 }
 
+.contacts .data:before
+{
+    top: 0;
+
+    width: 1px;
+    height: 100%;
+
+    opacity: .2;
+    border-radius: 0;
+}
+
 
 
 .contacts .block_head
 {
-    width: 340px;
+    width: auto;
     margin: 0;
+    padding: 0;
+}
+
+.contacts .block_head .title
+{
+    width: 100%;
 }
 
 

@@ -1,12 +1,15 @@
 header
 {
-    z-index: 5;
+    position: relative;
+    z-index: 90;
     top: 0;
     left: 0;
 
     width: 100%;
     margin-bottom: 50px;
     padding: 20px 0;
+
+    transition: .2s linear;
 }
 
 header.absolute
@@ -27,6 +30,8 @@ header .info
 {
     padding: 19px;
 
+    transition: .2s linear;
+
     border: 1px solid #191919;
     border-radius: 42px;
 
@@ -42,6 +47,9 @@ header .logo img
     display: block;
 
     max-width: 100%;
+    height: 70px;
+
+    transition: height .2s linear;
 }
 
 
@@ -131,6 +139,188 @@ header .ipfs_status:before
 
 
 
+header .mob_menu_btn
+{
+    display: none;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left: 20px;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+header .mob_menu_btn svg,
+header .mob_menu_btn.active svg + svg
+{
+    display: block;
+}
+
+header .mob_menu_btn.active svg,
+header .mob_menu_btn svg + svg
+{
+    display: none;
+}
+
+
+
+header.fixed
+{
+    position: fixed;
+
+    margin: 0;
+    padding: 0;
+
+    background: #000;
+}
+
+
+header.fixed .info
+{
+    padding: 11px 19px;
+
+    border-color: transparent;
+    border-radius: 32px;
+}
+
+
+header.fixed .logo img
+{
+    height: 60px;
+}
+
+
+
+.mob_menu
+{
+    position: fixed;
+    z-index: 89;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
+    margin: 0;
+    padding: 124px 0 0;
+
+    transition: transform .3s linear;
+    transform: translateX(-100%);
+
+    background: #141414;
+}
+
+.mob_menu.show
+{
+    transform: translateX(0);
+}
+
+
+.mob_menu .scroll
+{
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
+    padding: 0 24px 40px;
+
+    overscroll-behavior-y: contain;
+}
+
+
+
+
+.mob_menu .menu
+{
+    margin-bottom: 60px;
+}
+
+
+.mob_menu .menu .menu_item + .menu_item
+{
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+
+.mob_menu .menu .btn
+{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+
+    display: block;
+
+    width: 100%;
+    padding: 22px 0;
+
+    text-align: left;
+
+    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+
+
+.mob_menu .contacts
+{
+    margin-top: auto;
+}
+
+
+.mob_menu .contacts .title
+{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+
+    margin-bottom: 20px;
+    padding-bottom: 19px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+
+.mob_menu .contacts .socials
+{
+    width: 355px;
+    max-width: 100%;
+    margin-left: 0;
+
+    justify-content: space-between;
+}
+
+
+.mob_menu .contacts .socials a + a
+{
+    margin-left: 0;
+}
+
+.mob_menu .contacts .socials a
+{
+    --color2: #141414;
+}
+
+
+.mob_menu .contacts .socials svg
+{
+    width: 44px;
+    height: 44px;
+}
+
+
+
 @media print,
 (max-width: 1439px)
 {
@@ -151,7 +341,8 @@ header .ipfs_status:before
     }
 
 
-    header .info
+    header .info,
+    header.fixed .info
     {
         padding: 15px;
 
@@ -196,7 +387,8 @@ header .ipfs_status:before
 @media print,
 (max-width: 1023px)
 {
-    header .info
+    header .info,
+    header.fixed .info
     {
         padding: 11px;
     }
@@ -216,7 +408,14 @@ header .ipfs_status:before
 
     header .ipfs_status
     {
-        margin-right: 24px;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+
+    header .mob_menu_btn
+    {
+        display: flex;
     }
 }
 
@@ -235,6 +434,12 @@ header .ipfs_status:before
     {
         height: 60px;
     }
+
+
+    header.fixed .logo img
+    {
+        height: 52px;
+    }
 }
 
 
@@ -252,5 +457,25 @@ header .ipfs_status:before
     header .logo img
     {
         height: 52px;
+    }
+
+
+    header.fixed .logo img
+    {
+        height: 44px;
+    }
+
+
+
+    .mob_menu
+    {
+        padding-top: 96px;
+    }
+
+
+    .mob_menu .scroll
+    {
+        padding-right: 12px;
+        padding-left: 12px;
     }
 }

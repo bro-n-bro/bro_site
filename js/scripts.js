@@ -3,8 +3,13 @@ addStylesheetURL('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,1
 
 
 document.addEventListener("DOMContentLoaded", function () {
+	const mobMenuBtn = document.querySelector('header .mob_menu_btn'),
+		body = document.querySelector('body'),
+		mobMenu = document.querySelector('.mob_menu')
+
+
 	// Ширина окна для ресайза
-	WW = document.body.clientWidth
+	WW = window.innerWidth
 
 
 	// Есть ли поддержка тач событий или это apple устройство
@@ -52,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Моб. версия
 	firstResize = false
 
-	if (document.body.clientWidth < 375) {
+	if (window.innerWidth < 375) {
 		document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
 
 		firstResize = true
@@ -67,17 +72,22 @@ document.addEventListener("DOMContentLoaded", function () {
 			element.addEventListener('click', e => {
 				e.preventDefault()
 
+				mobMenuBtn.classList.remove('active')
+				body.classList.remove('menu_open')
+				mobMenu.classList.remove('show')
+
 				let anchor = element.getAttribute('data-anchor')
 
 				document.getElementById(anchor).scrollIntoView({
-					behavior: 'smooth'
+					behavior: 'smooth',
+					block: 'start'
 				})
 			})
 		})
 	}
 
 
-	// Менмоника
+	// Мнемоника
 	const words = document.querySelector('.first_section .words')
 
 	if (words) {
@@ -85,17 +95,59 @@ document.addEventListener("DOMContentLoaded", function () {
 			animateWords(words)
 		}, 3000)
 	}
+
+
+	// Моб. меню
+	if (mobMenuBtn && mobMenu) {
+		mobMenuBtn.addEventListener('click', e => {
+			e.preventDefault()
+
+			mobMenuBtn.classList.toggle('active')
+			body.classList.toggle('menu_open')
+			mobMenu.classList.toggle('show')
+		})
+	}
+
+
+	if (is_touch_device()) {
+		// Закрытие моб. меню свайпом справо на лево
+		let ts
+
+		body.addEventListener('touchstart', e => { ts = e.touches[0].clientX })
+
+		body.addEventListener('touchend', e => {
+			let te = e.changedTouches[0].clientX
+
+			if (body.classList.contains('menu_open') && ts > te + 50) {
+				// Свайп справо на лево
+				mobMenuBtn.classList.remove('active')
+				body.classList.remove('menu_open')
+				mobMenu.classList.remove('show')
+			}
+		})
+	}
+})
+
+
+
+window.addEventListener('load', () => {
+	// Фикс. шапка
+	headerInit = true
+
+	headerInit && window.scrollY > 0
+		? document.querySelector('header').classList.add('fixed')
+		: document.querySelector('header').classList.remove('fixed')
 })
 
 
 
 window.addEventListener('resize', () => {
-	if (typeof WW !== 'undefined' && WW != document.body.clientWidth) {
+	if (typeof WW !== 'undefined' && WW != window.innerWidth) {
 		// Моб. версия
 		if (!firstResize) {
 			document.getElementsByTagName('meta')['viewport'].content = 'width=device-width, initial-scale=1, maximum-scale=1'
 
-			if (document.body.clientWidth < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
+			if (window.innerWidth < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
 
 			firstResize = true
 		} else {
@@ -103,9 +155,30 @@ window.addEventListener('resize', () => {
 		}
 
 
+		// Фикс. шапка
+		headerInit = false
+
+		setTimeout(() => {
+			headerInit = true
+
+			headerInit && window.scrollTop > 0
+				? document.querySelector('header').classList.add('fixed')
+				: document.querySelector('header').classList.remove('fixed')
+		}, 100)
+
+
 		// Перезапись ширины окна
-		WW = document.body.clientWidth
+		WW = window.innerWidth
 	}
+})
+
+
+
+window.addEventListener('scroll', () => {
+	// Фикс. шапка
+	typeof headerInit !== 'undefined' && headerInit && window.scrollY > 0
+		? document.querySelector('header').classList.add('fixed')
+		: document.querySelector('header').classList.remove('fixed')
 })
 
 
