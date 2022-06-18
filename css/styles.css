@@ -1453,6 +1453,11 @@ button
 /*------------------
     Article info
 ------------------*/
+.article_info .loader + .info
+{
+    display: none;
+}
+
 .article_info .info
 {
     display: flex;
@@ -1507,5 +1512,6 @@ button
 
 .article_info .text_block
 {
+    width: 100%;
     margin-top: 40px;
 }
