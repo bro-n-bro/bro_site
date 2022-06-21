@@ -648,7 +648,7 @@ button
 .text_block ul li:before
 {
     position: absolute;
-    top: 8px;
+    top: 12px;
     left: 0;
 
     display: block;
@@ -1378,6 +1378,8 @@ button
 .contacts .data:before
 {
     top: 0;
+
+    display: none;
 
     width: 1px;
     height: 100%;
