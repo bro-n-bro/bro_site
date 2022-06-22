@@ -625,7 +625,31 @@ button
 }
 
 
+.text_block blockquote
+{
+    position: relative;
 
+    display: block;
+
+    padding: 12px 20px;
+}
+
+.text_block blockquote:before
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 2px;
+    height: 100%;
+
+    content: '';
+
+    border-radius: 2px;
+    background: currentColor;
+}
 
 
 .text_block ul li
@@ -938,13 +962,13 @@ button
     background: #282828;
 
     justify-content: flex-start;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
 }
 
 
-.networks .item .thumb
+.networks .item .logo
 {
     position: relative;
 
@@ -954,10 +978,17 @@ button
     height: 40px;
 
     border-radius: 50%;
-    background: #d9d9d9;
+
+    align-self: center;
 }
 
-.networks .item .thumb img
+.networks .item .logo.bg_white
+{
+    background: #fff;
+}
+
+
+.networks .item .logo img
 {
     position: absolute;
     top: 0;
@@ -981,6 +1012,7 @@ button
     width: calc(100% - 170px);
     margin-left: 12px;
 
+    align-self: center;
     font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
@@ -1025,6 +1057,7 @@ button
     border-radius: 20px;
     background: #353535;
 
+    align-self: center;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -1034,7 +1067,7 @@ button
 
 .networks .item .apr span
 {
-    color: #950fff;
+    /* color: #950fff; */
     font-size: var(--font_size);
     font-weight: 600;
     line-height: 19px;
@@ -1066,6 +1099,8 @@ button
     padding: 17px 30px;
 
     transition: background .2s linear;
+    text-align: center;
+    text-decoration: none;
 
     border-radius: 140px;
     background: #353535;
@@ -1126,6 +1161,9 @@ button
 
 .projects .project .link
 {
+    position: relative;
+    z-index: 5;
+
     display: flex;
 
     margin-bottom: 33px;
@@ -1162,19 +1200,12 @@ button
 
     margin-bottom: 3px;
     margin-left: 10px;
-
-    transition: .2s linear;
 }
 
 
 .projects .project .link a:hover
 {
     background: #950fff;
-}
-
-.projects .project .link a:hover svg
-{
-    transform: translate(9px, -3px);
 }
 
 
