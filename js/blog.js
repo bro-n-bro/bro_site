@@ -134,58 +134,60 @@ class Tweets {
 
         let urlCID = new URL(window.location.href).searchParams.get('cid')
 
-        // Date definition
-        for (const el of this.loadData) {
-            if (urlCID == el.tx.value.msg[0].value.links[0].to) {
-                let time = new Date(el.timestamp).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                })
+        if (urlCID) {
+            // Date definition
+            for (const el of this.loadData) {
+                if (urlCID == el.tx.value.msg[0].value.links[0].to) {
+                    let time = new Date(el.timestamp).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })
 
-                article.querySelector('.date').innerText = time
+                    article.querySelector('.date').innerText = time
 
-                // Getting post content
-                if (this.node !== null) {
-                    // Getting post from ipfs
-                    for await (const message of await all(this.node.cat(urlCID))) {
-                        let item = new TextDecoder().decode(message)
+                    // Getting post content
+                    if (this.node !== null) {
+                        // Getting post from ipfs
+                        for await (const message of await all(this.node.cat(urlCID))) {
+                            let item = new TextDecoder().decode(message)
 
-                        article.querySelector('.text_block').innerHTML = marked.parse(item)
+                            article.querySelector('.text_block').innerHTML = marked.parse(item)
+                        }
+                    } else {
+                        // Getting post from gateway
+                        await fetch(this.gateway + urlCID)
+                            .then(response => response.text())
+                            .then(data => article.querySelector('.text_block').innerHTML = marked.parse(data))
                     }
-                } else {
-                    // Getting post from gateway
-                    await fetch(this.gateway + urlCID)
-                        .then(response => response.text())
-                        .then(data => article.querySelector('.text_block').innerHTML = marked.parse(data))
                 }
             }
+
+
+            // Adding Link Attributes
+            let firstTitle = article.querySelector('.text_block h1:first-child, .text_block h2:first-child, .text_block h3:first-child, .text_block h4:first-child, .text_block h5:first-child, .text_block h6:first-child')
+
+            if (firstTitle) {
+                article.querySelector('.title').textContent = firstTitle.textContent
+                document.getElementsByTagName('title')[0].textContent = firstTitle.textContent
+
+                firstTitle.remove()
+            }
+
+
+            // Adding Link Attributes
+            let links = article.querySelectorAll('.text_block a')
+
+            links.forEach(element => {
+                element.setAttribute('target', '_blank')
+                element.setAttribute('rel', 'noopener nofollow')
+            })
+
+
+            // Hiding the loader
+            const loader = article.querySelector('.loader')
+            if (loader) { loader.remove() }
         }
-
-
-        // Adding Link Attributes
-        let firstTitle = article.querySelector('.text_block h1:first-child, .text_block h2:first-child, .text_block h3:first-child, .text_block h4:first-child, .text_block h5:first-child, .text_block h6:first-child')
-
-        if (firstTitle) {
-            article.querySelector('.title').textContent = firstTitle.textContent
-            document.getElementsByTagName('title')[0].textContent = firstTitle.textContent
-
-            firstTitle.remove()
-        }
-
-
-        // Adding Link Attributes
-        let links = article.querySelectorAll('.text_block a')
-
-        links.forEach(element => {
-            element.setAttribute('target', '_blank')
-            element.setAttribute('rel', 'noopener nofollow')
-        })
-
-
-        // Hiding the loader
-        const loader = article.querySelector('.loader')
-        if (loader) { loader.remove() }
     }
 }
 
