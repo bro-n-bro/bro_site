@@ -125,7 +125,7 @@
     }
 
 
-    .whoami .image
+    .whoami .video
     {
         min-height: 500px;
     }
@@ -375,9 +375,9 @@
     }
 
 
-    .whoami .image
+    .whoami .video
     {
-        min-height: 488px;
+        min-height: 421px;
 
         border-radius: 32px;
     }
@@ -628,11 +628,12 @@
     }
 
 
-    .whoami .image
+    .whoami .video
     {
         width: 100%;
-        min-height: 388px;
+        min-height: 0;
         margin-top: 10px;
+        padding-bottom: 86.95%;
     }
 
 
@@ -965,12 +966,6 @@
     .whoami .text
     {
         font-size: 14px;
-    }
-
-
-    .whoami .image
-    {
-        min-height: 308px;
     }
 
 

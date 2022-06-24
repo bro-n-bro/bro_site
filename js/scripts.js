@@ -1,4 +1,4 @@
-// Загрузка шрифта
+// Load font
 addStylesheetURL('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
 
 
@@ -10,11 +10,11 @@ const mobMenuBtn = document.querySelector('header .mob_menu_btn'),
 
 
 document.addEventListener("DOMContentLoaded", function () {
-	// Ширина окна для ресайза
+	// Window width
 	WW = window.innerWidth
 
 
-	// Есть ли поддержка тач событий или это apple устройство
+	// Is there support for touch events or is it an apple device
 	if (!is_touch_device() || !/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) document.documentElement.classList.add('custom_scroll')
 
 
@@ -52,11 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	boxes.forEach(element => observer.observe(element))
 
 
-	// Установка ширины стандартного скроллбара
+	// Set the width of the scrollbar
 	document.documentElement.style.setProperty('--scroll_width', widthScroll() + 'px')
 
 
-	// Моб. версия
+	// Mob. version
 	firstResize = false
 
 	if (window.innerWidth < 375) {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 
-	// Плавная прокрутка к якорю
+	// Smooth scroll to anchor
 	const scrollBtns = document.querySelectorAll('.scroll_btn')
 
 	if (scrollBtns) {
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 
-	// Мнемоника
+	// Mnemonic
 	const words = document.querySelector('.first_section .words')
 
 	if (words) {
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 
-	// Моб. меню
+	// Mob. menu
 	if (mobMenuBtn && mobMenu) {
 		mobMenuBtn.addEventListener('click', e => {
 			e.preventDefault()
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 	if (is_touch_device()) {
-		// Закрытие моб. меню свайпом справо на лево
+		// Closing the mob. swipe menu right to left
 		let ts
 
 		body.addEventListener('touchstart', e => { ts = e.touches[0].clientX })
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			let te = e.changedTouches[0].clientX
 
 			if (body.classList.contains('menu_open') && ts > te + 50) {
-				// Свайп справо на лево
+				// Swipe from right to left
 				mobMenuBtn.classList.remove('active')
 				body.classList.remove('menu_open')
 				mobMenu.classList.remove('show')
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 window.addEventListener('load', () => {
-	// Фикс. шапка
+	// Fix. header
 	headerInit = true
 
 	if (headerWrap) {
@@ -149,7 +149,7 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', () => {
 	if (typeof WW !== 'undefined' && WW != window.innerWidth) {
-		// Моб. версия
+		// Mob. version
 		if (!firstResize) {
 			document.getElementsByTagName('meta')['viewport'].content = 'width=device-width, initial-scale=1, maximum-scale=1'
 
@@ -161,7 +161,7 @@ window.addEventListener('resize', () => {
 		}
 
 
-		// Фикс. шапка
+		// Fix. header
 		headerInit = false
 
 		setTimeout(() => {
@@ -178,7 +178,7 @@ window.addEventListener('resize', () => {
 		}, 100)
 
 
-		// Перезапись ширины окна
+		// Overwrite window width
 		WW = window.innerWidth
 	}
 })
@@ -186,7 +186,7 @@ window.addEventListener('resize', () => {
 
 
 window.addEventListener('scroll', () => {
-	// Фикс. шапка
+	// Fix. header
 	typeof headerInit !== 'undefined' && headerInit && window.scrollY > 0
 		? header.classList.add('fixed')
 		: header.classList.remove('fixed')
@@ -194,7 +194,7 @@ window.addEventListener('scroll', () => {
 
 
 
-// Вспомогательные функции
+// Secondary functions
 function addStylesheetURL(url) {
 	var link = document.createElement('link')
 	link.rel = 'stylesheet'
@@ -223,7 +223,7 @@ const widthScroll = () => {
 }
 
 
-// Анимация чисел
+// Animate numbers
 const animationDuration = 3000,
 	frameDuration = 1000 / 60,
 	totalFrames = Math.round(animationDuration / frameDuration),
@@ -251,7 +251,7 @@ const animateCountUp = el => {
 }
 
 
-// Менмоника
+// Menmonica
 const animateWords = el => {
 	el.classList.toggle('change')
 

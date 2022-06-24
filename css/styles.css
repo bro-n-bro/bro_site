@@ -896,7 +896,7 @@ button
 }
 
 
-.whoami .image
+.whoami .video
 {
     position: relative;
 
@@ -907,10 +907,12 @@ button
     margin-left: auto;
 
     border-radius: 40px;
-    background: #950fff;
+    background: #000;
 }
 
-.whoami .image img
+
+.whoami .video img,
+.whoami .video video
 {
     position: absolute;
     top: 0;
