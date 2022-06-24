@@ -168,6 +168,7 @@ class Tweets {
 
         if (firstTitle) {
             article.querySelector('.title').textContent = firstTitle.textContent
+            document.getElementsByTagName('title')[0].textContent = firstTitle.textContent
 
             firstTitle.remove()
         }
