@@ -18,40 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (!is_touch_device() || !/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) document.documentElement.classList.add('custom_scroll')
 
 
-	// Observer API
-	const boxes = document.querySelectorAll('.lazyload, .countUp')
-
-	function scrollTracking(entries) {
-		for (const entry of entries) {
-			if (entry.intersectionRatio >= 0.2 && entry.target.getAttribute('data-src') && !entry.target.classList.contains('loaded')) {
-				entry.target.src = entry.target.getAttribute('data-src')
-				entry.target.classList.add('loaded')
-			}
-
-			if (entry.intersectionRatio >= 0.2 && entry.target.localName === 'picture' && !entry.target.classList.contains('loaded')) {
-				let sources = entry.target.querySelectorAll('source'),
-					img = entry.target.querySelector('img')
-
-				sources.forEach(source => source.srcset = source.getAttribute('data-srcset'))
-				img.src = img.getAttribute('data-src')
-
-				entry.target.classList.add('loaded')
-			}
-
-			if (entry.intersectionRatio >= 0.2 && entry.target.classList.contains('countUp') && !entry.target.classList.contains('animated')) {
-				animateCountUp(entry.target)
-				entry.target.classList.add('animated')
-			}
-		}
-	}
-
-	const observer = new IntersectionObserver(scrollTracking, {
-		threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-	})
-
-	boxes.forEach(element => observer.observe(element))
-
-
 	// Set the width of the scrollbar
 	document.documentElement.style.setProperty('--scroll_width', widthScroll() + 'px')
 
@@ -64,6 +30,105 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		firstResize = true
 	}
+
+
+	// Fetch API
+	(async () => {
+		await fetch('https://rpc.bronbro.io/bro_data/')
+			.then(response => response.json())
+			.then(data => {
+				// Networks validated
+				const networksValidatedEl = document.querySelector('.stats .networks_validated')
+
+				if (networksValidatedEl) {
+					networksValidatedEl.querySelector('.countUp').textContent = data.networks_validated
+					networksValidatedEl.querySelector('.hide').textContent = data.networks_validated
+				}
+
+
+				// Delegators
+				const delegatorsEl = document.querySelector('.stats .delegators')
+
+				if (delegatorsEl) {
+					delegatorsEl.querySelector('.countUp').textContent = data.delegators
+					delegatorsEl.querySelector('.hide').textContent = data.delegators
+				}
+
+
+				// Networks
+				const networksEl = document.querySelector('.networks')
+
+				if (networksEl) {
+					data.infos.forEach(element => {
+						let el = networksEl.querySelector('.item.' + element.network + ' .apr span i')
+
+						if (el) { el.textContent = (element.apr * 100).toFixed(2) }
+					})
+				}
+
+
+				// Trusted tokens
+				const trustedTokensEl = document.querySelector('.trusted_tokens')
+
+				if (trustedTokensEl) {
+					trustedTokensEl.querySelector('.atom').textContent = Math.ceil(data.tokens_in_atom).toLocaleString()
+					trustedTokensEl.querySelector('.btc').textContent = Math.ceil(data.tokens_in_btc).toLocaleString()
+					trustedTokensEl.querySelector('.eth').textContent = Math.ceil(data.tokens_in_eth).toLocaleString()
+					trustedTokensEl.querySelector('.usd').textContent = Math.ceil(data.tokens_in_usd).toLocaleString()
+
+					new Swiper('.trusted_tokens.swiper', {
+						loop: true,
+						speed: 300,
+						spaceBetween: 0,
+						slidesPerView: 1,
+						direction: 'vertical',
+						simulateTouch: false,
+						allowTouchMove: true,
+						noSwiping: true,
+						autoplay: {
+							delay: 2000
+						},
+						watchSlidesProgress: true,
+						slideActiveClass: 'active',
+						slideVisibleClass: 'visible'
+					})
+				}
+
+
+				// Observer API
+				const boxes = document.querySelectorAll('.lazyload, .countUp')
+
+				function scrollTracking(entries) {
+					for (const entry of entries) {
+						if (entry.intersectionRatio >= 0.2 && entry.target.getAttribute('data-src') && !entry.target.classList.contains('loaded')) {
+							entry.target.src = entry.target.getAttribute('data-src')
+							entry.target.classList.add('loaded')
+						}
+
+						if (entry.intersectionRatio >= 0.2 && entry.target.localName === 'picture' && !entry.target.classList.contains('loaded')) {
+							let sources = entry.target.querySelectorAll('source'),
+								img = entry.target.querySelector('img')
+
+							sources.forEach(source => source.srcset = source.getAttribute('data-srcset'))
+							img.src = img.getAttribute('data-src')
+
+							entry.target.classList.add('loaded')
+						}
+
+						if (entry.intersectionRatio >= 0.2 && entry.target.classList.contains('countUp') && !entry.target.classList.contains('animated')) {
+							animateCountUp(entry.target)
+							entry.target.classList.add('animated')
+						}
+					}
+				}
+
+				const observer = new IntersectionObserver(scrollTracking, {
+					threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+				})
+
+				boxes.forEach(element => observer.observe(element))
+			})
+	})()
 
 
 	// Smooth scroll to anchor
@@ -93,9 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const words = document.querySelector('.first_section .words')
 
 	if (words) {
-		setTimeout(() => {
-			animateWords(words)
-		}, 3000)
+		setTimeout(() => animateWords(words), 3000)
 	}
 
 
@@ -255,7 +318,5 @@ const animateCountUp = el => {
 const animateWords = el => {
 	el.classList.toggle('change')
 
-	setTimeout(() => {
-		animateWords(el)
-	}, 3200)
+	setTimeout(() => animateWords(el), 3200)
 }

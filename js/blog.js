@@ -129,7 +129,7 @@ class Tweets {
     }
 
 
-    async parseOnTweet() {
+    async parseOneTweet() {
         await this.loadTweets()
 
         let urlCID = new URL(window.location.href).searchParams.get('cid')
@@ -208,4 +208,4 @@ const all = async source => {
 let tweets = new Tweets()
 
 if (blog) { tweets.parseALLTweets() }
-if (article) { tweets.parseOnTweet() }
+if (article) { tweets.parseOneTweet() }

@@ -531,6 +531,7 @@ button
 .block_head .desc
 {
     color: #fff;
+    font-size: calc(var(--font_size) + 2px);
     line-height: 170%;
 
     width: calc(100% - 430px);
@@ -810,10 +811,12 @@ button
     font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
+
 .stats .item .val .hide
 {
     opacity: 0;
 }
+
 
 .stats .item .val .countUp
 {
@@ -823,6 +826,37 @@ button
 
     width: 100%;
     height: 100%;
+}
+
+.stats .item.delegators .val
+{
+    padding-right: 12px;
+}
+
+
+.stats .swiper
+{
+    height: 61px;
+    margin: 0;
+}
+
+
+.stats .swiper-slide
+{
+    position: relative;
+
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+
+    opacity: 0;
+}
+
+.stats .swiper-slide.visible
+{
+    visibility: visible;
+
+    opacity: 1;
 }
 
 
@@ -1011,11 +1045,16 @@ button
     font-weight: 600;
     line-height: 26px;
 
-    width: calc(100% - 170px);
+    width: calc(100% - 188px);
     margin-left: 12px;
 
     align-self: center;
     font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+.networks .item .coming_soon + .name
+{
+    width: calc(100% - 52px);
 }
 
 
@@ -1048,7 +1087,7 @@ button
 
     display: flex;
 
-    width: 90px;
+    min-width: 90px;
     margin-left: auto;
     padding: 10px 12px;
 
@@ -1077,6 +1116,11 @@ button
     margin-left: 6px;
 
     font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+.networks .item .apr i
+{
+    font-style: normal;
 }
 
 

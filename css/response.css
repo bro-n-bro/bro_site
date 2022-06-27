@@ -103,6 +103,12 @@
     }
 
 
+    .stats .swiper
+    {
+        height: 48px;
+    }
+
+
 
     /*------------
         Whoami
@@ -276,6 +282,8 @@
 
     .block_head .desc
     {
+        font-size: calc(var(--font_size) + 1px);
+
         width: calc(100% - 328px);
     }
 
@@ -343,11 +351,18 @@
         font-size: 17px;
     }
 
+
     .stats .item .val
     {
         font-size: 44px;
 
-        margin-left: 24px;
+        margin-left: 20px;
+    }
+
+
+    .stats .swiper
+    {
+        height: 44px;
     }
 
 
@@ -392,7 +407,7 @@
         font-size: 19px;
         line-height: 23px;
 
-        width: calc(100% - 148px);
+        width: calc(100% - 173px);
     }
 
 
@@ -401,7 +416,6 @@
         font-size: 13px;
         line-height: 17px;
 
-        width: 84px;
         padding: 8px 12px;
     }
 
@@ -567,7 +581,7 @@
 
     .stats .data
     {
-        padding: 0 24px 52px;
+        padding: 0 48px 48px;
     }
 
 
@@ -581,6 +595,8 @@
     {
         font-size: 16px;
 
+        flex-direction: column;
+
         text-align: center;
     }
 
@@ -591,17 +607,28 @@
         order: 2;
     }
 
+
     .stats .item .val
     {
-        font-size: 40px;
+        font-size: 42px;
 
-        width: 100%;
         margin-bottom: 12px;
         margin-left: 0;
 
         text-align: center;
 
         order: 1;
+    }
+
+    .stats .item.delegators .val
+    {
+        padding: 0;
+    }
+
+
+    .stats .swiper
+    {
+        height: 96px;
     }
 
 
@@ -754,6 +781,8 @@
     {
         font-size: 15px;
 
+        flex-direction: row;
+
         width: 100%;
 
         text-align: left;
@@ -771,11 +800,24 @@
 
     .stats .item .val
     {
-        width: auto;
         margin-bottom: 0;
-        margin-left: 28px;
+        margin-left: auto;
+
+        text-align: right;
 
         order: 0;
+    }
+
+    .stats .item.delegators .val
+    {
+        padding-right: 12px;
+    }
+
+
+    .stats .swiper
+    {
+        width: 100%;
+        height: 42px;
     }
 
 
@@ -953,9 +995,22 @@
     /*-----------
         Stats
     -----------*/
+    .stats .data
+    {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+
+
     .stats .item .val
     {
         font-size: 38px;
+    }
+
+
+    .stats .swiper
+    {
+        height: 38px;
     }
 
 
