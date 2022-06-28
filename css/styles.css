@@ -1154,6 +1154,11 @@ button
     font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
+.networks .item .btn:hover
+{
+    background: #950fff;
+}
+
 
 .networks .item:hover
 {
@@ -1165,11 +1170,6 @@ button
 .networks .item:hover .apr
 {
     background: #f2f2f2;
-}
-
-.networks .item:hover .btn
-{
-    background: #950fff;
 }
 
 
@@ -1439,8 +1439,7 @@ button
 {
     display: flex;
 
-    padding-right: 100px;
-    padding-left: 100px;
+    padding: 70px 100px;
 
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
