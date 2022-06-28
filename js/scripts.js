@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 				// Observer API
-				const boxes = document.querySelectorAll('.lazyload, .countUp')
+				const boxes = document.querySelectorAll('.lazyload, .countUp, .animate')
 
 				function scrollTracking(entries) {
 					for (const entry of entries) {
@@ -117,6 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 						if (entry.intersectionRatio >= 0.2 && entry.target.classList.contains('countUp') && !entry.target.classList.contains('animated')) {
 							animateCountUp(entry.target)
+							entry.target.classList.add('animated')
+						}
+
+						if (entry.intersectionRatio >= 0.2 && entry.target.classList.contains('animate')) {
 							entry.target.classList.add('animated')
 						}
 					}
@@ -151,14 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
 				})
 			})
 		})
-	}
-
-
-	// Mnemonic
-	const words = document.querySelector('.first_section .words')
-
-	if (words) {
-		setTimeout(() => animateWords(words), 3000)
 	}
 
 
@@ -263,6 +259,8 @@ function addStylesheetURL(url) {
 	link.rel = 'stylesheet'
 	link.href = url
 	document.getElementsByTagName('head')[0].appendChild(link)
+
+	document.getElementsByTagName('body')[0].classList.add('fonts_true')
 }
 
 
@@ -311,12 +309,4 @@ const animateCountUp = el => {
 				clearInterval(counter)
 			}
 		}, frameDuration)
-}
-
-
-// Menmonica
-const animateWords = el => {
-	el.classList.toggle('change')
-
-	setTimeout(() => animateWords(el), 3200)
 }
