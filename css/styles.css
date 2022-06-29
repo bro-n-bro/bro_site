@@ -997,8 +997,8 @@ button
 
     overflow: hidden;
 
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 
     border-radius: 50%;
 
@@ -1032,7 +1032,7 @@ button
     font-weight: 600;
     line-height: 26px;
 
-    width: calc(100% - 188px);
+    width: calc(100% - 208px);
     margin-left: 12px;
 
     align-self: center;
@@ -1040,7 +1040,7 @@ button
 
 .networks .item .coming_soon + .name
 {
-    width: calc(100% - 52px);
+    width: calc(100% - 76px);
 }
 
 
@@ -1073,13 +1073,13 @@ button
 
     min-width: 90px;
     margin-left: auto;
-    padding: 10px 12px;
+    padding: 15px 12px;
 
     transition: background .2s linear;
     text-align: center;
     text-transform: uppercase;
 
-    border-radius: 20px;
+    border-radius: 25px;
     background: #353535;
 
     align-self: center;
@@ -1092,7 +1092,7 @@ button
 
 .networks .item .apr span
 {
-    /* color: #950fff; */
+    color: #950fff;
     font-size: var(--font_size);
     font-weight: 600;
     line-height: 19px;
