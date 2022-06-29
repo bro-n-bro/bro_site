@@ -260,7 +260,6 @@ function addStylesheetURL(url) {
 	link.href = url
 	document.getElementsByTagName('head')[0].appendChild(link)
 
-	document.getElementsByTagName('body')[0].classList.add('fonts_true')
 }
 
 

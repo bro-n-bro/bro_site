@@ -356,8 +356,6 @@ button
 
     border-radius: 40px;
     background: #353535;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 .all_link a:hover
@@ -523,8 +521,6 @@ button
 
     width: 340px;
     max-width: 100%;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -536,8 +532,6 @@ button
 
     width: calc(100% - 430px);
     margin-left: auto;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -596,8 +590,6 @@ button
     line-height: 160%;
 
     letter-spacing: .01em;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -791,7 +783,6 @@ button
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -910,8 +901,6 @@ button
     line-height: calc(100% + 9px);
 
     margin-bottom: 36px;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -920,8 +909,6 @@ button
     font-size: 22px;
     font-weight: 500;
     line-height: 170%;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 .whoami .text > * + *
@@ -1049,7 +1036,6 @@ button
     margin-left: 12px;
 
     align-self: center;
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 .networks .item .coming_soon + .name
@@ -1075,8 +1061,6 @@ button
 
     border-radius: 20px;
     background: #fff;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -1114,8 +1098,6 @@ button
     line-height: 19px;
 
     margin-left: 6px;
-
-    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 .networks .item .apr i
@@ -1130,8 +1112,6 @@ button
 
     width: 100%;
     margin-top: 20px;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -1150,8 +1130,6 @@ button
 
     border-radius: 140px;
     background: #353535;
-
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 .networks .item .btn:hover
@@ -1236,7 +1214,6 @@ button
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -1351,8 +1328,6 @@ button
     transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
-
-    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 .blog .item .title:empty
@@ -1379,7 +1354,6 @@ button
     height: 72px;
 
     flex: 1 0 auto;
-    font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 .blog .item .desc > *
@@ -1404,17 +1378,6 @@ button
     background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0) 0%, rgba(40, 40, 40, 1) 100%);
     background:         linear-gradient(to bottom, rgba(40, 40, 40, 0) 0%, rgba(40, 40, 40, 1) 100%);
 }
-
-
-/* .blog .item .title:empty + .desc
-{
-    height: auto;
-}
-
-.blog .item .title:empty + .desc:after
-{
-    display: none;
-} */
 
 
 
@@ -1561,8 +1524,6 @@ button
 
     width: 100%;
     margin-bottom: 10px;
-
-    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 
@@ -1573,7 +1534,11 @@ button
     line-height: 150%;
 
     opacity: .5;
+}
 
+
+.article_info .date
+{
     font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
