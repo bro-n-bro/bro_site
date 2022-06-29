@@ -1115,6 +1115,59 @@ button
 }
 
 
+.networks .item .features
+{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+
+    width: 100%;
+    margin-top: 20px;
+}
+
+.networks .item .features > *
+{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.networks .item .features > * + *
+{
+    margin-top: 10px;
+    padding-top: 10px;
+
+    transition: border-color .2s linear;
+
+    border-top: 1px solid rgba(255, 255, 255, .05);
+}
+
+
+.networks .item .features br
+{
+    display: none;
+}
+
+
+.networks .item .features span
+{
+    text-transform: uppercase;
+}
+
+
+.networks .item .features .val
+{
+    font-size: 24px;
+
+    white-space: nowrap;
+
+    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+
 .networks .item .btn
 {
     color: var(--text_color);
@@ -1148,6 +1201,11 @@ button
 .networks .item:hover .apr
 {
     background: #f2f2f2;
+}
+
+.networks .item:hover .features > * + *
+{
+    border-color: #f2f2f2;
 }
 
 

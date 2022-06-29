@@ -147,6 +147,17 @@
     }
 
 
+    .networks .item .features
+    {
+        font-size: 15px;
+    }
+
+    .networks .item .features .val
+    {
+        font-size: 21px;
+    }
+
+
     .networks .item .btn
     {
         line-height: 19px;
@@ -408,12 +419,19 @@
     /*--------------
         Networks
     --------------*/
+    .networks .item .logo
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+
     .networks .item .name
     {
         font-size: 19px;
         line-height: 23px;
 
-        width: calc(100% - 173px);
+        width: calc(100% - 184px);
     }
 
 
@@ -429,6 +447,22 @@
     {
         font-size: 14px;
         line-height: 17px;
+    }
+
+
+    .networks .item .features
+    {
+        font-size: 14px;
+    }
+
+    .networks .item .features br
+    {
+        display: block;
+    }
+
+    .networks .item .features .val
+    {
+        font-size: 18px;
     }
 
 
@@ -683,6 +717,12 @@
     .networks .row > *
     {
         width: calc(50% - 16px);
+    }
+
+
+    .networks .item .features br
+    {
+        display: none;
     }
 
 
@@ -1047,6 +1087,29 @@
     .whoami .text
     {
         font-size: 14px;
+    }
+
+
+
+    /*--------------
+        Networks
+    --------------*/
+    .networks .item .logo
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .networks .item .name
+    {
+        width: calc(100% - 172px);
+    }
+
+
+    .networks .item .features br
+    {
+        display: block;
     }
 
 
