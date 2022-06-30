@@ -553,6 +553,8 @@ button
 
 .block .data
 {
+    position: relative;
+
     padding: 80px 56px 65px 67px;
 
     border-radius: 60px;
@@ -829,25 +831,6 @@ button
 {
     height: 61px;
     margin: 0;
-}
-
-
-.stats .swiper-slide
-{
-    position: relative;
-
-    visibility: hidden;
-
-    transition: opacity .2s linear, visibility .2s linear;
-
-    opacity: 0;
-}
-
-.stats .swiper-slide.visible
-{
-    visibility: visible;
-
-    opacity: 1;
 }
 
 
@@ -1549,14 +1532,65 @@ button
 
 
 
+/*----------
+    Back
+----------*/
+.back
+{
+    margin-bottom: 20px;
+}
+
+
+.back .cont
+{
+    display: flex;
+
+    max-width: 1326px;
+}
+
+
+.back .link
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+
+    display: flex;
+
+    padding: 17px 30px;
+
+    transition: background .2s linear;
+    text-decoration: none;
+
+    border-radius: 140px;
+    background: #141414;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.back .link svg
+{
+    display: block;
+
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+.back .link:hover
+{
+    background: #950fff;
+}
+
+
+
 /*------------------
     Article info
 ------------------*/
-.article_info .loader + .info
-{
-    display: none;
-}
-
 .article_info .info
 {
     display: flex;
@@ -1615,4 +1649,64 @@ button
 {
     width: 100%;
     margin-top: 40px;
+}
+
+
+.article_info .prev_link,
+.article_info .next_link
+{
+    color: #fff;
+
+    position: absolute;
+    top: 72px;
+    left: 112px;
+
+    display: flex;
+
+    width: 80px;
+    height: 80px;
+
+    transition: .2s linear;
+
+    border: 1px solid #282828;
+    border-radius: 50%;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.article_info .next_link
+{
+    right: 112px;
+    left: auto;
+
+    transform: rotate(180deg);
+}
+
+
+.article_info .prev_link svg,
+.article_info .next_link svg
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+.article_info .prev_link:hover,
+.article_info .next_link:hover
+{
+    color: #000;
+
+    border-color: #fff;
+    background: #fff;
+}
+
+
+.article_info .loader ~ *
+{
+    display: none;
 }

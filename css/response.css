@@ -79,6 +79,12 @@
     }
 
 
+    .text_block ul li:before
+    {
+        top: 10px;
+    }
+
+
 
     /*-----------
         Stats
@@ -245,6 +251,36 @@
         width: 64px;
         height: 64px;
     }
+
+
+
+    /*----------
+        Back
+    ----------*/
+    .back .cont
+    {
+        padding: 0 24px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .prev_link,
+    .article_info .next_link
+    {
+        left: 24px;
+
+        width: 72px;
+        height: 72px;
+    }
+
+    .article_info .next_link
+    {
+        right: 24px;
+        left: auto;
+    }
 }
 
 
@@ -336,6 +372,12 @@
     .text_block > *
     {
         margin-bottom: 24px;
+    }
+
+
+    .text_block ul li:before
+    {
+        top: 9px;
     }
 
 
@@ -546,6 +588,50 @@
     {
         width: 56px;
         height: 56px;
+    }
+
+
+
+    /*----------
+        Back
+    ----------*/
+    .back .cont
+    {
+        padding: 0 12px;
+    }
+
+
+    .back .link
+    {
+        font-size: 15px;
+        line-height: 19px;
+
+        padding: 16px 28px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .data
+    {
+        padding-bottom: 140px;
+    }
+
+
+    .article_info .prev_link,
+    .article_info .next_link
+    {
+        top: auto;
+        bottom: 32px;
+        left: 32px;
+    }
+
+    .article_info .next_link
+    {
+        right: 32px;
+        left: auto;
     }
 }
 
@@ -765,6 +851,30 @@
     .contacts .socials a + a
     {
         margin-left: 20px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .data
+    {
+        padding-bottom: 132px;
+    }
+
+
+    .article_info .prev_link,
+    .article_info .next_link
+    {
+        bottom: 24px;
+        left: 24px;
+    }
+
+    .article_info .next_link
+    {
+        right: 24px;
+        left: auto;
     }
 }
 
@@ -1013,6 +1123,16 @@
         width: 48px;
         height: 48px;
     }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .data
+    {
+        padding-bottom: 132px;
+    }
 }
 
 
@@ -1169,5 +1289,50 @@
     {
         width: 44px;
         height: 44px;
+    }
+
+
+
+    /*----------
+        Back
+    ----------*/
+    .back
+    {
+        margin-bottom: 10px;
+    }
+
+
+    .back .link
+    {
+        font-size: 14px;
+        line-height: 18px;
+
+        padding: 14px 24px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .data
+    {
+        padding-bottom: 120px;
+    }
+
+
+    .article_info .prev_link,
+    .article_info .next_link
+    {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .article_info .prev_link svg,
+    .article_info .next_link svg
+    {
+        width: 20px;
+        height: 20px;
     }
 }

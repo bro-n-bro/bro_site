@@ -132,12 +132,16 @@ class Tweets {
     async parseOneTweet() {
         await this.loadTweets()
 
-        let urlCID = new URL(window.location.href).searchParams.get('cid')
+        let urlCID = new URL(window.location.href).searchParams.get('cid'),
+            currentIndex
 
         if (urlCID) {
             // Date definition
-            for (const el of this.loadData) {
+            for (const [i, el] of this.loadData.entries()) {
                 if (urlCID == el.tx.value.msg[0].value.links[0].to) {
+                    currentIndex = i
+
+                    // Getting post date
                     let time = new Date(el.timestamp).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
@@ -162,6 +166,15 @@ class Tweets {
                     }
                 }
             }
+
+
+            // Prev/Next
+            let prevIndex = (currentIndex - 1 < 0) ? this.loadData.length - 1 : currentIndex - 1,
+                nextIndex = (currentIndex + 1 > this.loadData.length - 1) ? 0 : currentIndex + 1
+
+            article.querySelector('.prev_link').setAttribute('href', `./blog_item.html?cid=${this.loadData[prevIndex].tx.value.msg[0].value.links[0].to}`)
+
+            article.querySelector('.next_link').setAttribute('href', `./blog_item.html?cid=${this.loadData[nextIndex].tx.value.msg[0].value.links[0].to}`)
 
 
             // Adding Link Attributes
