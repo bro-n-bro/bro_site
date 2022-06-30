@@ -263,6 +263,7 @@ header.fixed .logo img
 
 .mob_menu .menu .btn
 {
+    color: currentColor;
     font-size: 22px;
     font-weight: 500;
     line-height: 26px;
@@ -273,6 +274,7 @@ header.fixed .logo img
     padding: 22px 0;
 
     text-align: left;
+    text-decoration: none;
 }
 
 
