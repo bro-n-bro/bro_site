@@ -6,7 +6,9 @@ const mobMenuBtn = document.querySelector('.mob_menu_btn'),
 	body = document.querySelector('body'),
 	mobMenu = document.querySelector('.mob_menu'),
 	header = document.querySelector('header'),
-	headerWrap = document.querySelector('.header_wrap')
+	headerWrap = document.querySelector('.header_wrap'),
+	words = document.querySelector('.words'),
+	wordsArr = ['access', 'approve', 'awesome', 'balance', 'believe', 'bonus', 'bridge', 'calm', 'choice', 'citizen', 'deliver', 'develop', 'educate', 'enjoy', 'evolve', 'first', 'focus', 'follow', 'friend', 'gain', 'grant', 'guard', 'height', 'hero', 'improve', 'increase', 'legend', 'lottery', 'love', 'member', 'monitor', 'priority', 'profit', 'public', 'result', 'service', 'solution', 'strategy', 'success', 'trend', 'web']
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -29,6 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
 
 		firstResize = true
+	}
+
+
+	// Words
+	if (words) {
+		let wordsResult = []
+
+		getRandomInt = max => Math.floor(Math.random() * Math.floor(max))
+
+		while (wordsResult.length != 12) {
+			let index = getRandomInt(wordsArr.length)
+
+			wordsResult.push(wordsArr[index])
+			wordsResult = wordsResult.filter((v, i, arr) => arr.indexOf(v) == i)
+		}
+
+		wordsResult.forEach(element => {
+			words.innerHTML += `<div><span>${element}</span></div>`
+		})
+
+		words.classList.add('animate')
 	}
 
 
