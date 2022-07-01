@@ -193,7 +193,7 @@
 
     .projects .project
     {
-        padding: 28px 28px 0;
+        padding: 28px;
     }
 
 
@@ -203,7 +203,7 @@
     }
 
 
-    .projects .project .thumb img
+    .projects .project .thumb img.monitor
     {
         left: -28px;
 
@@ -522,12 +522,19 @@
     --------------*/
     .projects .project
     {
-        padding: 24px 24px 0;
+        padding: 24px;
 
         border-radius: 32px;
     }
 
 
+    .projects .project .link
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .projects .project .link > span,
     .projects .project .link a
     {
         padding: 14px 24px;
@@ -536,16 +543,23 @@
     }
 
 
-    .projects .project .thumb
+    .projects .project .thumb,
+    .projects .project .thumb img
     {
-        padding-bottom: 77.75%;
+        border-radius: 32px;
     }
 
-    .projects .project .thumb img
+    .projects .project .thumb img.monitor
     {
         left: -24px;
 
         width: calc(100% + 48px);
+    }
+
+
+    .projects .project .tags > *
+    {
+        font-size: 13px;
     }
 
 
@@ -813,6 +827,26 @@
 
 
 
+    /*--------------
+        Projects
+    --------------*/
+    .projects .project
+    {
+        padding: 16px;
+
+        border-radius: 24px;
+    }
+
+
+
+    .projects .project .thumb,
+    .projects .project .thumb img
+    {
+        border-radius: 24px;
+    }
+
+
+
     /*----------
         Blog
     ----------*/
@@ -1037,6 +1071,8 @@
     --------------*/
     .projects .project
     {
+        padding: 24px;
+
         border-radius: 28px;
     }
 
@@ -1239,17 +1275,22 @@
     --------------*/
     .projects .project
     {
-        padding: 24px 20px 0;
+        padding: 20px;
 
         border-radius: 24px;
     }
 
 
-    .projects .project .thumb img
+    .projects .project .thumb
     {
-        left: -16px;
+        padding-bottom: 81.09%;
+    }
 
-        width: calc(100% + 32px);
+    .projects .project .thumb img.monitor
+    {
+        left: -20px;
+
+        width: calc(100% + 40px);
     }
 
 
