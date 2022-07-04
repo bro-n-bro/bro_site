@@ -221,6 +221,23 @@
 			}
 
 
+			.first_section .mob_bg
+			{
+			    position: absolute;
+			    z-index: -2;
+			    top: 104px;
+			    left: 50%;
+
+			    display: none;
+
+			    width: 473px;
+			    height: 262px;
+			    margin-left: -240px;
+
+			    pointer-events: none;
+			}
+
+
 
 			@media print, (max-width: 1439px)
 			{
@@ -393,15 +410,15 @@
 
 			    .first_section .bg_left
 			    {
-			        left: -48px;
+			        left: -88px;
 
 			        width: 320px;
 			    }
 
 			    .first_section .bg_right
 			    {
-			        right: -104px;
-			        bottom: 76px;
+			        right: -180px;
+			        bottom: 69px;
 
 			        width: 372px;
 			    }
@@ -448,6 +465,8 @@
 			        bottom: -24px;
 			        left: -48px;
 
+			        display: none;
+
 			        width: 340px;
 			    }
 
@@ -456,7 +475,15 @@
 			        right: -120px;
 			        bottom: 112px;
 
+			        display: none;
+
 			        width: 400px;
+			    }
+
+
+			    .first_section .mob_bg
+			    {
+			        display: block;
 			    }
 			}
 
@@ -467,6 +494,7 @@
 			    .first_section
 			    {
 			        min-height: 0;
+			        padding-bottom: 60px;
 			    }
 
 
@@ -508,6 +536,12 @@
 			        bottom: 24px;
 
 			        width: 110%;
+			    }
+
+
+			    .first_section .mob_bg
+			    {
+			        top: 90px;
 			    }
 			}
 
@@ -637,6 +671,8 @@
 
 					<img data-src="images/bg_first_section_left.svg" alt="" class="bg_left lazyload">
 					<img data-src="images/bg_first_section_right.svg" alt="" class="bg_right lazyload">
+
+					<img data-src="images/mob_bg_first_section.svg" alt="" class="mob_bg lazyload">
 				</section>
 
 
