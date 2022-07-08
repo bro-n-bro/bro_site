@@ -829,8 +829,14 @@ button
 
 .stats .swiper
 {
+    width: 252px;
     height: 61px;
     margin: 0;
+}
+
+.stats .swiper.swiper-initialized
+{
+    width: auto;
 }
 
 

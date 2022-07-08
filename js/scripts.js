@@ -57,111 +57,115 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Fetch API
 	(async () => {
-		await fetch('https://rpc.bronbro.io/bro_data/')
-			.then(response => response.json())
-			.then(data => {
-				// Networks validated
-				const networksValidatedEl = document.querySelector('.stats .networks_validated')
+		try {
+			await fetch('https://rpc.bronbro.io/bro_data/')
+				.then(response => response.json())
+				.then(data => {
+					// Networks validated
+					const networksValidatedEl = document.querySelector('.stats .networks_validated')
 
-				if (networksValidatedEl) {
-					networksValidatedEl.querySelector('.countUp').textContent = data.networks_validated
-					networksValidatedEl.querySelector('.hide').textContent = data.networks_validated
-				}
-
-
-				// Delegators
-				const delegatorsEl = document.querySelector('.stats .delegators')
-
-				if (delegatorsEl) {
-					delegatorsEl.querySelector('.countUp').textContent = data.delegators
-					delegatorsEl.querySelector('.hide').textContent = data.delegators
-				}
-
-
-				// Networks
-				const networksEl = document.querySelector('.networks')
-
-				if (networksEl) {
-					// Networks - APR
-					data.infos.forEach(element => {
-						let el = networksEl.querySelector('.item.' + element.network)
-
-						if (el) {
-							el.style.cssText = `order: ${(element.apr * -100).toFixed(0)};`
-							el.querySelector('.apr span i').textContent = (element.apr * 100).toFixed(2)
-							el.querySelector('.delegations_in span').textContent = element.denom
-							el.querySelector('.delegations_in .val').textContent = Math.ceil(element.tokens).toLocaleString()
-							el.querySelector('.delegations .val').textContent = Math.ceil(element.delegators).toLocaleString()
-						}
-					})
-				}
-
-
-				// Trusted tokens
-				const trustedTokensEl = document.querySelector('.trusted_tokens')
-
-				if (trustedTokensEl) {
-					trustedTokensEl.querySelector('.atom').textContent = Math.ceil(data.tokens_in_atom).toLocaleString()
-					trustedTokensEl.querySelector('.btc').textContent = Math.ceil(data.tokens_in_btc).toLocaleString()
-					trustedTokensEl.querySelector('.eth').textContent = Math.ceil(data.tokens_in_eth).toLocaleString()
-					trustedTokensEl.querySelector('.usd').textContent = Math.ceil(data.tokens_in_usd).toLocaleString()
-
-					new Swiper('.trusted_tokens.swiper', {
-						loop: true,
-						speed: 300,
-						spaceBetween: 0,
-						slidesPerView: 1,
-						direction: 'vertical',
-						simulateTouch: false,
-						allowTouchMove: true,
-						noSwiping: true,
-						autoplay: {
-							delay: 2000
-						},
-						watchSlidesProgress: true,
-						slideActiveClass: 'active',
-						slideVisibleClass: 'visible'
-					})
-				}
-
-
-				// Observer API
-				const boxes = document.querySelectorAll('.lazyload, .countUp, .animate')
-
-				function scrollTracking(entries) {
-					for (const entry of entries) {
-						if (entry.intersectionRatio >= 0.2 && entry.target.getAttribute('data-src') && !entry.target.classList.contains('loaded')) {
-							entry.target.src = entry.target.getAttribute('data-src')
-							entry.target.classList.add('loaded')
-						}
-
-						if (entry.intersectionRatio >= 0.2 && entry.target.localName === 'picture' && !entry.target.classList.contains('loaded')) {
-							let sources = entry.target.querySelectorAll('source'),
-								img = entry.target.querySelector('img')
-
-							sources.forEach(source => source.srcset = source.getAttribute('data-srcset'))
-							img.src = img.getAttribute('data-src')
-
-							entry.target.classList.add('loaded')
-						}
-
-						if (entry.intersectionRatio >= 0.2 && entry.target.classList.contains('countUp') && !entry.target.classList.contains('animated')) {
-							animateCountUp(entry.target)
-							entry.target.classList.add('animated')
-						}
-
-						if (entry.intersectionRatio >= 0.2 && entry.target.classList.contains('animate')) {
-							entry.target.classList.add('animated')
-						}
+					if (networksValidatedEl) {
+						networksValidatedEl.querySelector('.countUp').textContent = data.networks_validated
+						networksValidatedEl.querySelector('.hide').textContent = data.networks_validated
 					}
+
+
+					// Delegators
+					const delegatorsEl = document.querySelector('.stats .delegators')
+
+					if (delegatorsEl) {
+						delegatorsEl.querySelector('.countUp').textContent = data.delegators
+						delegatorsEl.querySelector('.hide').textContent = data.delegators
+					}
+
+
+					// Networks
+					const networksEl = document.querySelector('.networks')
+
+					if (networksEl) {
+						// Networks - APR
+						data.infos.forEach(element => {
+							let el = networksEl.querySelector('.item.' + element.network)
+
+							if (el) {
+								el.style.cssText = `order: ${(element.apr * -100).toFixed(0)};`
+								el.querySelector('.apr span i').textContent = (element.apr * 100).toFixed(2)
+								el.querySelector('.delegations_in span').textContent = element.denom
+								el.querySelector('.delegations_in .val').textContent = Math.ceil(element.tokens).toLocaleString()
+								el.querySelector('.delegations .val').textContent = Math.ceil(element.delegators).toLocaleString()
+							}
+						})
+					}
+
+
+					// Trusted tokens
+					const trustedTokensEl = document.querySelector('.trusted_tokens')
+
+					if (trustedTokensEl) {
+						trustedTokensEl.querySelector('.atom').textContent = Math.ceil(data.tokens_in_atom).toLocaleString()
+						trustedTokensEl.querySelector('.btc').textContent = Math.ceil(data.tokens_in_btc).toLocaleString()
+						trustedTokensEl.querySelector('.eth').textContent = Math.ceil(data.tokens_in_eth).toLocaleString()
+						trustedTokensEl.querySelector('.usd').textContent = Math.ceil(data.tokens_in_usd).toLocaleString()
+
+						new Swiper('.trusted_tokens.swiper', {
+							loop: true,
+							speed: 300,
+							spaceBetween: 0,
+							slidesPerView: 1,
+							direction: 'vertical',
+							simulateTouch: false,
+							allowTouchMove: true,
+							noSwiping: true,
+							autoplay: {
+								delay: 2000
+							},
+							watchSlidesProgress: true,
+							slideActiveClass: 'active',
+							slideVisibleClass: 'visible'
+						})
+					}
+				})
+		} catch (err) {
+			console.log(err)
+		}
+
+
+		// Observer API
+		const boxes = document.querySelectorAll('.lazyload, .countUp, .animate')
+
+		function scrollTracking(entries) {
+			for (const entry of entries) {
+				if (entry.intersectionRatio >= 0.2 && entry.target.getAttribute('data-src') && !entry.target.classList.contains('loaded')) {
+					entry.target.src = entry.target.getAttribute('data-src')
+					entry.target.classList.add('loaded')
 				}
 
-				const observer = new IntersectionObserver(scrollTracking, {
-					threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-				})
+				if (entry.intersectionRatio >= 0.2 && entry.target.localName === 'picture' && !entry.target.classList.contains('loaded')) {
+					let sources = entry.target.querySelectorAll('source'),
+						img = entry.target.querySelector('img')
 
-				boxes.forEach(element => observer.observe(element))
-			})
+					sources.forEach(source => source.srcset = source.getAttribute('data-srcset'))
+					img.src = img.getAttribute('data-src')
+
+					entry.target.classList.add('loaded')
+				}
+
+				if (entry.intersectionRatio >= 0.2 && entry.target.classList.contains('countUp') && !entry.target.classList.contains('animated')) {
+					animateCountUp(entry.target)
+					entry.target.classList.add('animated')
+				}
+
+				if (entry.intersectionRatio >= 0.2 && entry.target.classList.contains('animate')) {
+					entry.target.classList.add('animated')
+				}
+			}
+		}
+
+		const observer = new IntersectionObserver(scrollTracking, {
+			threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+		})
+
+		boxes.forEach(element => observer.observe(element))
 	})()
 
 
