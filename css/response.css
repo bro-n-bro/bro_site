@@ -980,7 +980,8 @@
     }
 
 
-    .stats .item
+    .stats .item,
+    .stats .swiper.swiper-initialized
     {
         font-size: 15px;
 
