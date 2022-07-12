@@ -1188,8 +1188,8 @@
 
     :root
     {
-        --font_size: 14px;
-        --font_size_title: 28px;
+        --font_size: 15px;
+        --font_size_title: 30px;
     }
 
 
@@ -1234,16 +1234,6 @@
     .stats .swiper
     {
         height: 38px;
-    }
-
-
-
-    /*------------
-        Whoami
-    ------------*/
-    .whoami .text
-    {
-        font-size: 14px;
     }
 
 
