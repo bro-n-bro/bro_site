@@ -524,6 +524,23 @@ button
 }
 
 
+.block_head .title a
+{
+    color: currentColor;
+
+    display: inline-block;
+
+    transition: color .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.block_head .title a:hover
+{
+    color: #950fff;
+}
+
+
 .block_head .desc
 {
     color: #fff;
