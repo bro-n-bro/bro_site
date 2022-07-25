@@ -1,5 +1,6 @@
 const blog = document.getElementById('blog'),
     article = document.getElementById('article'),
+    error = document.getElementById('error'),
     ipfsStatus = document.querySelector('header .ipfs_status'),
     tweetsEl = blog ? blog.querySelector('.row') : null
 
@@ -222,3 +223,4 @@ let tweets = new Tweets()
 
 if (blog) { tweets.parseALLTweets() }
 if (article) { tweets.parseOneTweet() }
+if (error) { tweets.initNode() }

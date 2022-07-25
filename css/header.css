@@ -3,6 +3,16 @@
     margin-bottom: 50px;
 }
 
+.header_wrap.min_margin
+{
+    margin-bottom: 10px;
+}
+
+.header_wrap header
+{
+    margin: 0;
+}
+
 
 header
 {
@@ -18,16 +28,16 @@ header
     transition: .2s linear;
 }
 
-.header_wrap header
-{
-    margin: 0;
-}
-
 header.absolute
 {
     position: absolute;
 
     margin: 0;
+}
+
+header.min_margin
+{
+    margin-bottom: 10px;
 }
 
 

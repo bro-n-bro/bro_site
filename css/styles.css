@@ -1795,3 +1795,101 @@ button
 {
     display: none;
 }
+
+
+
+/*----------------
+    Error info
+----------------*/
+.error_info
+{
+    color: #fff;
+
+    position: relative;
+    z-index: 3;
+
+    padding: 12px 0 124px;
+
+    text-align: center;
+}
+
+
+.error_info .image
+{
+    margin-bottom: 12px;
+}
+
+.error_info .image img
+{
+    display: block;
+
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.error_info .title
+{
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 61px;
+}
+
+
+.error_info .desc
+{
+    font-size: 18px;
+    line-height: 170%;
+
+    margin-top: 14px;
+}
+
+
+.error_info .bg_left
+{
+    position: absolute;
+    z-index: -2;
+    bottom: -8px;
+    left: 50%;
+
+    display: block;
+
+    width: 455px;
+    margin-left: -800px;
+
+    pointer-events: none;
+}
+
+
+.error_info .bg_right
+{
+    position: absolute;
+    z-index: -2;
+    right: 50%;
+    bottom: 80px;
+
+    display: block;
+
+    width: 523px;
+    margin-right: -800px;
+
+    pointer-events: none;
+}
+
+
+.error_info .mob_bg
+{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 50%;
+
+    display: none;
+
+    width: 473px;
+    height: 262px;
+    margin-left: -240px;
+
+    pointer-events: none;
+}
