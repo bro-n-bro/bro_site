@@ -353,7 +353,7 @@ const ATOMInit = async () => {
 			maxTokens = 0,
 			persents = 0
 
-		const currentPromise = await fetch('https://lcd.cosmoshub-4.cybernode.ai/staking/validators/cosmosvaloper106yp7zw35wftheyyv9f9pe69t8rteumjrx52jg')
+		const currentPromise = await fetch('https://lcd.cosmoshub-4.bronbro.io/staking/validators/cosmosvaloper106yp7zw35wftheyyv9f9pe69t8rteumjrx52jg')
 			.then(response => response.json())
 			.then(data => {
 				currentTokens = data.result.tokens / 1000000
@@ -361,7 +361,7 @@ const ATOMInit = async () => {
 				ATOMInfo.querySelector('.progress .current').textContent = parseInt(currentTokens).toLocaleString()
 			})
 
-		const maxPromise = await fetch('https://lcd.cosmoshub-4.cybernode.ai/staking/validators?status=BOND_STATUS_BONDED&page=1&limit=175')
+		const maxPromise = await fetch('https://lcd.cosmoshub-4.bronbro.io/staking/validators?status=BOND_STATUS_BONDED&page=1&limit=175')
 			.then(response => response.json())
 			.then(data => {
 				let tokensArr = data.result.map(el => el.tokens)
