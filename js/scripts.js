@@ -358,7 +358,7 @@ const ATOMInit = async () => {
 			.then(data => {
 				currentTokens = data.result.tokens / 1000000
 
-				ATOMInfo.querySelector('.progress .current').textContent = Math.fround(currentTokens.toFixed(2)).toLocaleString()
+				ATOMInfo.querySelector('.progress .current').textContent = parseFloat(currentTokens.toFixed(2)).toLocaleString()
 			})
 
 		const maxPromise = await fetch('https://lcd.cosmoshub-4.cybernode.ai/staking/validators?status=BOND_STATUS_BONDED&page=1&limit=175')
@@ -368,7 +368,7 @@ const ATOMInit = async () => {
 
 				maxTokens = Math.min(...tokensArr) / 1000000
 
-				ATOMInfo.querySelector('.progress .max').textContent = Math.fround(maxTokens.toFixed(2)).toLocaleString()
+				ATOMInfo.querySelector('.progress .max').textContent = parseFloat(maxTokens.toFixed(2)).toLocaleString()
 			})
 
 
