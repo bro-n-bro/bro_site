@@ -7,6 +7,7 @@ const mobMenuBtn = document.querySelector('.mob_menu_btn'),
 	mobMenu = document.querySelector('.mob_menu'),
 	header = document.querySelector('header'),
 	headerWrap = document.querySelector('.header_wrap'),
+	ATOMInfo = document.querySelector('.first_section .atom_info'),
 	words = document.querySelector('.words'),
 	wordsArr = ['access', 'approve', 'awesome', 'balance', 'believe', 'bonus', 'bridge', 'calm', 'choice', 'citizen', 'deliver', 'develop', 'educate', 'enjoy', 'evolve', 'first', 'focus', 'follow', 'friend', 'gain', 'grant', 'guard', 'height', 'hero', 'improve', 'increase', 'legend', 'lottery', 'love', 'member', 'monitor', 'priority', 'profit', 'public', 'result', 'service', 'solution', 'strategy', 'success', 'trend', 'web']
 
@@ -342,4 +343,46 @@ const animateCountUp = el => {
 				clearInterval(counter)
 			}
 		}, frameDuration)
+}
+
+
+// ATOM info
+const ATOMInit = async () => {
+	try {
+		var currentTokens = 0,
+			maxTokens = 0,
+			persents = 0
+
+		const currentPromise = await fetch('https://lcd.cosmoshub-4.cybernode.ai/staking/validators/cosmosvaloper106yp7zw35wftheyyv9f9pe69t8rteumjrx52jg')
+			.then(response => response.json())
+			.then(data => {
+				currentTokens = data.result.tokens / 1000000
+
+				ATOMInfo.querySelector('.progress .current').textContent = Math.fround(currentTokens.toFixed(2)).toLocaleString()
+			})
+
+		const maxPromise = await fetch('https://lcd.cosmoshub-4.cybernode.ai/staking/validators?status=BOND_STATUS_BONDED&page=1&limit=175')
+			.then(response => response.json())
+			.then(data => {
+				let tokensArr = data.result.map(el => el.tokens)
+
+				maxTokens = Math.min(...tokensArr) / 1000000
+
+				ATOMInfo.querySelector('.progress .max').textContent = Math.fround(maxTokens.toFixed(2)).toLocaleString()
+			})
+
+
+		Promise.all([currentPromise, maxPromise]).then(() => {
+			persents = currentTokens / maxTokens * 100
+
+			ATOMInfo.querySelector('.progress .bar div').style.width = persents + '%'
+		})
+	} catch (err) {
+		console.log(err)
+	}
+}
+
+if (ATOMInfo) {
+	ATOMInit()
+	setInterval(async () => ATOMInit(), 7000)
 }

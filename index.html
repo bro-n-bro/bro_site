@@ -35,9 +35,10 @@
 			    z-index: 3;
 
 			    display: flex;
+			    /* min-height: 792px; */
+			    /* padding: 150px 0; */
 
-			    min-height: 792px;
-			    padding: 150px 0;
+			    padding: 240px 0 80px;
 
 			    text-align: center;
 
@@ -189,6 +190,124 @@
 			}
 
 
+			.first_section .atom_info .desc
+			{
+			    color: #fff;
+			    font-size: 20px;
+			    line-height: 140%;
+
+			    width: 776px;
+			    max-width: 100%;
+			    margin: 20px auto 0;
+
+			    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+			}
+
+
+			.first_section .atom_info .progress
+			{
+			    display: flex;
+
+			    width: 580px;
+			    max-width: 100%;
+			    margin: 40px auto 0;
+
+			    justify-content: space-between;
+			    align-items: center;
+			    align-content: center;
+			    flex-wrap: wrap;
+			}
+
+
+			.first_section .atom_info .progress .bar
+			{
+			    width: 100%;
+			    height: 22px;
+
+			    border-radius: 20px;
+			    background: #212121;
+			}
+
+			.first_section .atom_info .progress .bar div
+			{
+			    width: 0;
+			    height: 22px;
+
+			    transition: width .2s linear;
+
+			    border-radius: 20px;
+			    background: #950fff;
+			}
+
+
+			.first_section .atom_info .progress .current,
+			.first_section .atom_info .progress .max
+			{
+			    color: #464646;
+			    line-height: 140%;
+
+			    margin-top: 10px;
+
+			    white-space: nowrap;
+
+			    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+			}
+
+
+			.first_section .atom_info .btns
+			{
+			    display: flex;
+
+			    margin-top: 30px;
+
+			    justify-content: center;
+			    align-items: center;
+			    align-content: center;
+			    flex-wrap: wrap;
+			}
+
+
+			.first_section .atom_info .btn
+			{
+			    color: currentColor;
+			    font-weight: 600;
+			    line-height: 19px;
+
+			    padding: 17px 30px;
+
+			    transition: .2s linear;
+			    text-decoration: none;
+
+			    border-radius: 140px;
+			    background: #353535;
+			}
+
+			.first_section .atom_info .btn.bg,
+			.first_section .atom_info .btn:hover
+			{
+			    background: #950fff;
+			}
+
+
+			.first_section .atom_info .btns .or
+			{
+			    font-weight: 600;
+			    line-height: 19px;
+
+			    margin: 0 20px;
+			}
+
+
+			.first_section .atom_info .btns .exp
+			{
+			    font-size: 20px;
+			    line-height: 140%;
+
+			    width: 100%;
+			    margin-top: 20px;
+			}
+
+
 			.first_section .bg_left
 			{
 			    position: absolute;
@@ -244,7 +363,7 @@
 			    .first_section
 			    {
 			        min-height: 700px;
-			        padding: 180px 0 100px;
+			        padding: 200px 0 80px;
 			    }
 
 
@@ -275,6 +394,26 @@
 			    }
 
 
+			    .first_section .atom_info .desc
+			    {
+			        font-size: 19px;
+
+			        width: 736px;
+			    }
+
+
+			    .first_section .atom_info .progress
+			    {
+			        width: 540px;
+			    }
+
+
+			    .first_section .atom_info .btns .exp
+			    {
+			        font-size: 19px;
+			    }
+
+
 			    .first_section .bg_left
 			    {
 			        bottom: 0;
@@ -301,7 +440,7 @@
 			    .first_section
 			    {
 			        min-height: 550px;
-			        padding: 152px 0 80px;
+			        padding: 180px 0 60px;
 			    }
 
 
@@ -367,7 +506,7 @@
 			{
 			    .first_section
 			    {
-			        padding: 148px 0 72px;
+			        padding: 160px 0 60px;
 			    }
 
 
@@ -408,6 +547,39 @@
 			    }
 
 
+			    .first_section .atom_info .desc
+			    {
+			        font-size: 18px;
+
+			        width: 696px;
+			    }
+
+
+			    .first_section .atom_info .progress
+			    {
+			        width: 480px;
+			        margin-top: 36px;
+			    }
+
+
+			    .first_section .atom_info .btns
+			    {
+			        margin-top: 24px;
+			    }
+
+			    .first_section .atom_info .btn
+			    {
+			        line-height: 18px;
+
+			        padding: 16px 28px;
+			    }
+
+			    .first_section .atom_info .btns .exp
+			    {
+			        font-size: 18px;
+			    }
+
+
 			    .first_section .bg_left
 			    {
 			        left: -88px;
@@ -430,7 +602,7 @@
 			{
 			    .first_section
 			    {
-			        padding: 148px 0 68px;
+			        padding: 168px 0 52px;
 			    }
 
 
@@ -457,6 +629,32 @@
 			    .first_section .words > *
 			    {
 			        width: 115px;
+			    }
+
+
+			    .first_section .atom_info .desc
+			    {
+			        font-size: 17px;
+
+			        width: 100%;
+			    }
+
+
+			    .first_section .atom_info .progress
+			    {
+			        width: 100%;
+			    }
+
+			    .first_section .atom_info .progress .bar,
+			    .first_section .atom_info .progress .bar > *
+			    {
+			        height: 20px;
+			    }
+
+
+			    .first_section .atom_info .btns .exp
+			    {
+			        font-size: 17px;
 			    }
 
 
@@ -508,6 +706,23 @@
 			    .first_section .words span
 			    {
 			        padding: 10px 20px;
+			    }
+
+
+			    .first_section .atom_info .desc
+			    {
+			        font-size: 16px;
+			    }
+
+
+			    .first_section .atom_info .btn
+			    {
+			        padding: 14px 24px;
+			    }
+
+			    .first_section .atom_info .btns .or
+			    {
+			        margin: 0 16px;
 			    }
 
 
@@ -644,7 +859,7 @@
 				</section>
 
 
-				<section class="first_section" id="home">
+				<!-- <section class="first_section" id="home">
 					<div class="cont">
 						<div class="data">
 							<div class="pre_title">Cosmos ecosystem validator</div>
@@ -652,6 +867,43 @@
 							<div class="title">Hi, I am your Bro</div>
 
 							<div class="words"></div>
+						</div>
+					</div>
+
+					<img data-src="images/bg_first_section_left.svg" alt="" class="bg_left lazyload">
+					<img data-src="images/bg_first_section_right.svg" alt="" class="bg_right lazyload">
+
+					<img data-src="images/mob_bg_first_section.svg" alt="" class="mob_bg lazyload">
+				</section> -->
+
+
+				<section class="first_section" id="home">
+					<div class="cont">
+						<div class="data">
+							<div class="pre_title">Cosmos ecosystem validator</div>
+
+							<div class="atom_info">
+								<div class="title">Let your Bro</div>
+
+								<div class="desc">secure cosmoshub. If every our delegator will stake/restake at least 5% of his ATOM to Bro_n_Bro - it will pop into the active validator set!</div>
+
+								<div class="progress">
+									<div class="bar"><div></div></div>
+
+									<div class="current">0</div>
+									<div class="max">0</div>
+								</div>
+
+								<div class="btns">
+									<a href="https://restake.app/cosmoshub/cosmosvaloper106yp7zw35wftheyyv9f9pe69t8rteumjrx52jg" class="btn bg" target="_blank" rel="noopener nofollow">Delegate</a>
+
+									<span class="or">or</span>
+
+									<a href="https://wallet.keplr.app/chains/cosmos-hub" class="btn" target="_blank" rel="noopener nofollow">Redelegate</a>
+
+									<div class="exp">to your Bro</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
