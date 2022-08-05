@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 							if (el) {
 								el.style.cssText = `order: ${(element.apr * -100).toFixed(0)};`
+								el.querySelector('.place').textContent = element.place
 								el.querySelector('.apr span i').textContent = (element.apr * 100).toFixed(2)
 								el.querySelector('.delegations_in span').textContent = element.denom
 								el.querySelector('.delegations_in .val').textContent = Math.ceil(element.tokens).toLocaleString()
