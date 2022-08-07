@@ -1009,6 +1009,11 @@ button
     align-self: center;
 }
 
+.networks .item .logo.bg_white
+{
+    background: #fff;
+}
+
 
 .networks .item .logo img
 {
@@ -1024,6 +1029,15 @@ button
     border-radius: inherit;
 
     object-fit: cover;
+}
+
+.networks .item .logo.padding img
+{
+    top: 5px;
+    left: 5px;
+
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
 }
 
 
