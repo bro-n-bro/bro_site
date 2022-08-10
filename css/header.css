@@ -162,7 +162,9 @@ header .ipfs_status .hover
     background: #353535;
 }
 
-header .ipfs_status.green:hover .hover
+
+header .ipfs_status.green:hover .hover_green,
+header .ipfs_status:not(.green):hover .hover_red
 {
     visibility: visible;
 
