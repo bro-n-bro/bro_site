@@ -370,10 +370,12 @@ const ATOMInit = async () => {
 		const maxPromise = await fetch('https://lcd.cosmoshub-4.bronbro.io/staking/validators?status=BOND_STATUS_BONDED&page=1&limit=175')
 			.then(response => response.json())
 			.then(data => {
-				let tokensArr = data.result.map(el => el.tokens)
+				let tokensArr = data.result.map(el => el.tokens),
+					sepPostion = tokensArr.sort((a, b) => b - a)[174] / tokensArr.sort((a, b) => b - a)[149]
 
-				maxTokens = Math.min(...tokensArr) / 1000000
+				maxTokens = tokensArr.sort((a, b) => b - a)[149] / 1000000
 
+				ATOMInfo.querySelector('.progress .active_set_text').style.left = sepPostion * 100 + '%'
 				ATOMInfo.querySelector('.progress .max').textContent = parseInt(maxTokens).toLocaleString()
 			})
 
