@@ -1459,6 +1459,25 @@ button
 }
 
 
+.blog .item .cid
+{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 150%;
+
+    display: flex;
+
+    text-align: center;
+    word-break: break-all;
+
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
 .blog .item .date
 {
     font-size: 14px;

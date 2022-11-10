@@ -64,10 +64,17 @@ class Tweets {
     }
 
 
-    async parseALLTweets() {
+    async parseALLTweets(limit) {
         await this.loadTweets()
 
-        for (const el of this.loadData) {
+        let sliceArray = []
+
+        // Limit
+        limit
+            ? sliceArray = this.loadData.slice(0, limit)
+            : sliceArray = this.loadData
+
+        sliceArray.forEach(async el => {
             let cid = el.tx.value.msg[0].value.links[0].to,
                 time = new Date(el.timestamp).toLocaleDateString('en-US', {
                     year: 'numeric',
@@ -77,10 +84,12 @@ class Tweets {
 
             if (this.node !== null) {
                 // Getting posts from ipfs
+                let className = this.preRenderPost(cid)
+
                 for await (const message of await all(this.node.cat(cid))) {
                     let data = new TextDecoder().decode(message)
 
-                    this.renderPost(cid, time, data)
+                    this.renderPost(cid, time, data, className)
                 }
             } else {
                 // Getting posts from gateway
@@ -88,23 +97,38 @@ class Tweets {
                     .then(response => response.text())
                     .then(data => this.renderPost(cid, time, data))
             }
+        })
+    }
+
+
+    preRenderPost(cid) {
+        if (tweetsEl) {
+            let className = randomString(12)
+
+            tweetsEl.innerHTML += String()
+                + '<div class="item ' + className + '">'
+                + '<div class="cid">' + cid + '</div>'
+                + '</div>'
+
+            // Hiding the loader
+            const loader = blog.querySelector('.loader')
+            if (loader) { loader.remove() }
+
+            return className
         }
     }
 
 
-    renderPost(cid, time, data) {
+    renderPost(cid, time, data, className) {
         if (tweetsEl) {
-            tweetsEl.innerHTML += String()
-                + '<div class="item">'
+            let article = blog.querySelector('.' + className)
+
+            article.innerHTML = String()
                 + '<div class="date">' + time + '</div>'
                 + '<a href="./blog_item.html?cid=' + cid + '" class="title"></a>'
                 + '<div class="desc text_block">' + marked.parse(data) + '</div>'
-                + '</div>'
-
 
             // Title wrap
-            let article = blog.querySelector('.item:last-child')
-
             let firstTitle = article.querySelector('.desc h1:first-child, .desc h2:first-child, .desc h3:first-child, .desc h4:first-child, .desc h5:first-child, .desc h6:first-child')
 
             if (firstTitle) {
@@ -121,11 +145,6 @@ class Tweets {
                 element.setAttribute('target', '_blank')
                 element.setAttribute('rel', 'noopener nofollow')
             })
-
-
-            // Hiding the loader
-            const loader = blog.querySelector('.loader')
-            if (loader) { loader.remove() }
         }
     }
 
@@ -219,8 +238,22 @@ const all = async source => {
 
 
 
+// Random string
+function randomString(i) {
+    let abc = 'abcdefghijklmnopqrstuvwxyz',
+        rs = ''
+
+    while (rs.length < i) {
+        rs += abc[Math.floor(Math.random() * abc.length)]
+    }
+
+    return rs
+}
+
+
+
 let tweets = new Tweets()
 
-if (blog) { tweets.parseALLTweets() }
+if (blog) { tweets.parseALLTweets(blog.classList.contains('limit') ? 6 : false) }
 if (article) { tweets.parseOneTweet() }
 if (error) { tweets.initNode() }
