@@ -699,21 +699,15 @@ button
 }
 
 
-.text_block ol
-{
-    counter-reset: li;
-}
-
 .text_block ol li
 {
-    position: relative;
-
+    /* position: relative;
     display: block;
-    overflow: hidden;
+    overflow: hidden; */
+    padding-left: 24px;
 
-    padding-left: 20px;
-
-    list-style-type: none;
+    list-style-position: inside;
+    /* list-style-type: none; */
 }
 
 .text_block ol li + li
@@ -721,7 +715,7 @@ button
     margin-top: 14px;
 }
 
-.text_block ol li:before
+/* .text_block ol li:before
 {
     color: var(--text_color);
     font-weight: 700;
@@ -732,7 +726,7 @@ button
 
     content: counter(li) '.';
     counter-increment: li;
-}
+} */
 
 
 .text_block a
