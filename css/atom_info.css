@@ -1,0 +1,304 @@
+.first_section .atom_info .title
+{
+    font-size: 52px;
+    line-height: 61px;
+}
+
+
+.first_section .atom_info .desc
+{
+    color: #fff;
+    font-size: 20px;
+    line-height: 140%;
+
+    width: 588px;
+    max-width: 100%;
+    margin: 20px auto 0;
+
+    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+
+.first_section .atom_info .progress
+{
+    position: relative;
+
+    display: flex;
+
+    width: 580px;
+    max-width: 100%;
+    margin: 40px auto 0;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.first_section .atom_info .progress .bar
+{
+    width: 100%;
+    height: 22px;
+
+    transition: width .2s linear;
+
+    border-radius: 20px;
+    background: #212121;
+}
+
+.first_section .atom_info .progress .bar div
+{
+    width: 0;
+    height: 22px;
+
+    transition: width .2s linear;
+
+    border-radius: 20px;
+    background: #950fff;
+}
+
+
+.first_section .atom_info .progress .active_set_text
+{
+    color: #464646;
+    line-height: 140%;
+
+    position: absolute;
+    top: 32px;
+    left: 50%;
+
+    transition: left .2s linear;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.first_section .atom_info .progress .active_set_text:before
+{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+
+    display: block;
+
+    width: 2px;
+    height: 28px;
+    margin-bottom: 7px;
+    margin-left: -1px;
+
+    content: '';
+
+    opacity: .6;
+    background: #fff;
+}
+
+
+.first_section .atom_info .progress .current,
+.first_section .atom_info .progress .max
+{
+    color: #464646;
+    line-height: 140%;
+
+    margin-top: 10px;
+
+    white-space: nowrap;
+
+    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+
+.first_section .atom_info .btns
+{
+    display: flex;
+
+    margin-top: 30px;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.first_section .atom_info .btn
+{
+    color: currentColor;
+    font-weight: 600;
+    line-height: 19px;
+
+    padding: 17px 30px;
+
+    transition: .2s linear;
+    text-decoration: none;
+
+    border-radius: 140px;
+    background: #353535;
+}
+
+.first_section .atom_info .btn.bg,
+.first_section .atom_info .btn:hover
+{
+    background: #950fff;
+}
+
+
+.first_section .atom_info .btns .or
+{
+    font-weight: 600;
+    line-height: 19px;
+
+    margin: 0 20px;
+}
+
+
+.first_section .atom_info .btns .exp
+{
+    font-size: 20px;
+    line-height: 140%;
+
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+@media print,
+(max-width: 1439px)
+{
+    .first_section .atom_info .desc
+    {
+        font-size: 19px;
+
+        width: 556px;
+    }
+
+
+    .first_section .atom_info .progress
+    {
+        width: 540px;
+    }
+
+
+    .first_section .atom_info .btns .exp
+    {
+        font-size: 19px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .first_section .atom_info .title
+    {
+        font-size: 46px;
+        line-height: 56px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .first_section .atom_info .title
+    {
+        font-size: 46px;
+        line-height: 52px;
+    }
+
+
+    .first_section .atom_info .desc
+    {
+        font-size: 18px;
+
+        width: 530px;
+    }
+
+
+    .first_section .atom_info .progress
+    {
+        width: 480px;
+        margin-top: 36px;
+    }
+
+
+    .first_section .atom_info .btns
+    {
+        margin-top: 24px;
+    }
+
+    .first_section .atom_info .btn
+    {
+        line-height: 18px;
+
+        padding: 16px 28px;
+    }
+
+    .first_section .atom_info .btns .exp
+    {
+        font-size: 18px;
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    .first_section .atom_info .title
+    {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+
+    .first_section .atom_info .desc
+    {
+        font-size: 16px;
+
+        width: 384px;
+    }
+
+
+    .first_section .atom_info .progress
+    {
+        width: 100%;
+    }
+
+    .first_section .atom_info .progress .bar,
+    .first_section .atom_info .progress .bar > *
+    {
+        height: 20px;
+    }
+
+
+    .first_section .atom_info .btns .exp
+    {
+        font-size: 17px;
+    }
+}
+
+
+
+@media print,
+(max-width: 479px)
+{
+    .first_section .atom_info .title
+    {
+        font-size: 35px;
+        line-height: 43px;
+    }
+
+
+    .first_section .atom_info .btn
+    {
+        padding: 14px 24px;
+    }
+
+    .first_section .atom_info .btns .or
+    {
+        margin: 0 16px;
+    }
+}

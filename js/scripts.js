@@ -228,6 +228,29 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		})
 	}
+
+
+	// Logo dropdown
+	const logoBtn = document.querySelector('header .logo .btn'),
+		logoDropdown = document.querySelector('header .logo .mini_modal')
+
+	if (logoBtn) {
+		logoBtn.addEventListener('click', e => {
+			e.preventDefault()
+
+			logoDropdown.classList.toggle('show')
+
+			if (is_touch_device()) body.classList.toggle('pointer')
+		})
+
+		document.addEventListener('click', e => {
+			if (!e.target.closest('header .logo')) {
+				logoDropdown.classList.remove('show')
+
+				if (is_touch_device()) body.classList.remove('pointer')
+			}
+		})
+	}
 })
 
 

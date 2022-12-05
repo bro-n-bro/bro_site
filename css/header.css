@@ -64,7 +64,26 @@ header .info
 
 
 
-header .logo img
+header .logo
+{
+    position: relative;
+}
+
+
+header .logo .btn
+{
+    display: flex;
+
+    cursor: pointer;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+header .logo .btn img
 {
     display: block;
 
@@ -72,6 +91,77 @@ header .logo img
     height: 70px;
 
     transition: height .2s linear;
+}
+
+
+header .logo .arr
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin-left: 14px;
+}
+
+
+header .logo .mini_modal
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: none;
+
+    width: 238px;
+    margin-top: 10px;
+    padding: 6px 4px;
+
+    border-radius: 10px;
+    background: #101010;
+}
+
+header .logo .mini_modal.show
+{
+    display: block;
+}
+
+header .logo .mini_modal > * + *
+{
+    margin-top: 8px;
+}
+
+
+header .logo .mini_modal a
+{
+    color: currentColor;
+
+    display: block;
+
+    padding: 6px 10px 6px 4px;
+
+    transition: background .2s linear;
+    text-decoration: none;
+
+    border-radius: 8px;
+}
+
+
+header .logo .mini_modal img
+{
+    display: block;
+
+    max-width: 100%;
+}
+
+header.fixed .logo .mini_modal img
+{
+    height: 48px;
+}
+
+
+header .logo .mini_modal a:hover
+{
+    background: #191919;
 }
 
 
@@ -412,7 +502,7 @@ header.fixed .logo img
     }
 
 
-    header .logo img
+    header .logo .btn img
     {
         height: 64px;
     }
@@ -456,6 +546,12 @@ header.fixed .logo img
     }
 
 
+    header.fixed .logo .mini_modal img
+    {
+        height: 40px;
+    }
+
+
     header .menu
     {
         display: none;
@@ -487,13 +583,13 @@ header.fixed .logo img
     }
 
 
-    header .logo img
+    header .logo .btn img
     {
         height: 60px;
     }
 
 
-    header.fixed .logo img
+    header.fixed .logo .btn img
     {
         height: 52px;
     }
@@ -517,13 +613,26 @@ header.fixed .logo img
     }
 
 
-    header .logo img
+    header .logo .btn img
     {
         height: 52px;
     }
 
 
-    header.fixed .logo img
+    header.fixed .logo .btn img
+    {
+        height: 44px;
+    }
+
+
+    header .logo .arr
+    {
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+    }
+
+    header .logo .mini_modal img
     {
         height: 44px;
     }
