@@ -32,6 +32,36 @@
 
 		<!-- First block styles -->
 		<style>
+			.new_year
+			{
+			    position: relative;
+			    z-index: 3;
+
+			    width: 100%;
+			    height: 100vh;
+			    margin-bottom: -74px;
+
+			    background: #3d108f;
+			}
+
+
+			.new_year img
+			{
+			    position: absolute;
+			    z-index: -1;
+			    top: 0;
+			    left: 0;
+
+			    display: block;
+
+			    width: 100%;
+			    height: 100%;
+
+			    object-fit: cover;
+			}
+
+
+
 			.first_section
 			{
 			    position: relative;
@@ -245,6 +275,19 @@
 
 			@media print, (max-width: 1439px)
 			{
+			    .new_year
+			    {
+			        margin-bottom: -60px;
+			    }
+
+			    .new_year img
+			    {
+			        top: 80px;
+
+			        height: calc(100% - 80px);
+			    }
+
+
 			    .first_section
 			    {
 			        min-height: 700px;
@@ -302,6 +345,19 @@
 
 			@media print, (max-width: 1279px)
 			{
+			    .new_year
+			    {
+			        margin-bottom: -40px;
+			    }
+
+			    .new_year img
+			    {
+			        top: 24px;
+
+			        height: calc(100% - 24px);
+			    }
+
+
 			    .first_section
 			    {
 			        min-height: 550px;
@@ -369,6 +425,12 @@
 
 			@media print, (max-width: 1023px)
 			{
+			    .new_year
+			    {
+			        height: 608px;
+			    }
+
+
 			    .first_section
 			    {
 			        padding: 160px 0 60px;
@@ -432,6 +494,19 @@
 
 			@media print, (max-width: 767px)
 			{
+			    .new_year
+			    {
+			        height: 440px;
+			    }
+
+			    .new_year img
+			    {
+			        top: 52px;
+
+			        height: calc(100% - 52px);
+			    }
+
+
 			    .first_section
 			    {
 			        padding: 168px 0 52px;
@@ -481,6 +556,12 @@
 
 			@media print, (max-width: 479px)
 			{
+			    .new_year
+			    {
+			        height: 348px;
+			    }
+
+
 			    .first_section
 			    {
 			        min-height: 0;
@@ -556,9 +637,9 @@
 										<img src="images/bro_score_logo.svg" alt="">
 									</a></div> -->
 
-									<!-- <div><a href="/" target="_blank" rel="noopener">
+									<div><a href="https://app.bronbro.io/" target="_blank" rel="noopener">
 										<img src="images/bro_app_logo.svg" alt="">
-									</a></div> -->
+									</a></div>
 
 									<div><a href="https://monitor.bronbro.io/" target="_blank" rel="noopener">
 										<img src="images/bro_stats_logo.svg" alt="">
@@ -694,7 +775,12 @@
 				</section> -->
 
 
-				<section class="first_section" id="home">
+				<section class="new_year" id="home">
+					<img data-src="images/bg_new_year.jpg" alt="" class="lazyload">
+				</section>
+
+
+				<!-- <section class="first_section" id="home">
 					<div class="cont">
 						<div class="data">
 							<div class="pre_title">Cosmos ecosystem validator</div>
@@ -729,7 +815,7 @@
 					<img data-src="images/bg_first_section_right.svg" alt="" class="bg_right lazyload">
 
 					<img data-src="images/mob_bg_first_section.svg" alt="" class="mob_bg lazyload">
-				</section>
+				</section> -->
 
 
 				<!-- <section class="halloween" id="home">
