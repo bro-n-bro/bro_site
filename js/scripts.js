@@ -11,14 +11,15 @@ const mobMenuBtn = document.querySelector('.mob_menu_btn'),
 	words = document.querySelector('.words'),
 	wordsArr = ['access', 'approve', 'awesome', 'balance', 'believe', 'bonus', 'bridge', 'calm', 'choice', 'citizen', 'deliver', 'develop', 'educate', 'enjoy', 'evolve', 'first', 'focus', 'follow', 'friend', 'gain', 'grant', 'guard', 'height', 'hero', 'improve', 'increase', 'legend', 'lottery', 'love', 'member', 'monitor', 'priority', 'profit', 'public', 'result', 'service', 'solution', 'strategy', 'success', 'trend', 'web']
 
+// Window width
+WW = window.innerWidth
+
 
 document.addEventListener("DOMContentLoaded", function () {
-	// Window width
-	WW = window.innerWidth
-
-
 	// Is there support for touch events or is it an apple device
-	if (!is_touch_device() || !/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) document.documentElement.classList.add('custom_scroll')
+	if (!is_touch_device() && !navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i)) {
+		document.documentElement.classList.add('custom_scroll')
+	}
 
 
 	// Set the width of the scrollbar
@@ -211,25 +212,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 
-	if (is_touch_device()) {
-		// Closing the mob. swipe menu right to left
-		let ts
-
-		body.addEventListener('touchstart', e => { ts = e.touches[0].clientX })
-
-		body.addEventListener('touchend', e => {
-			let te = e.changedTouches[0].clientX
-
-			if (body.classList.contains('menu_open') && ts > te + 50) {
-				// Swipe from right to left
-				mobMenuBtn.classList.remove('active')
-				body.classList.remove('menu_open')
-				mobMenu.classList.remove('show')
-			}
-		})
-	}
-
-
 	// Logo dropdown
 	const logoBtn = document.querySelector('header .logo .btn'),
 		logoDropdown = document.querySelector('header .logo .mini_modal')
@@ -320,8 +302,10 @@ window.addEventListener('scroll', () => {
 // Secondary functions
 function addStylesheetURL(url) {
 	var link = document.createElement('link')
+
 	link.rel = 'stylesheet'
 	link.href = url
+
 	document.getElementsByTagName('head')[0].appendChild(link)
 
 }
