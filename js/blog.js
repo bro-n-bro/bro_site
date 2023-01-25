@@ -84,15 +84,28 @@ class Tweets {
 
             if (this.node !== null) {
                 // Getting posts from ipfs
-                let className = this.preRenderPost(cid)
+                let className = this.preRenderPost(cid),
+                    delay = 10000,
+                    postStatus = false
 
                 for await (const message of await all(this.node.cat(cid))) {
                     let data = new TextDecoder().decode(message)
 
                     this.renderPost(cid, time, data, className)
+
+                    postStatus = true
                 }
+
+                setTimeout(async () => {
+                    // Getting post from gateway
+                    if (!postStatus) {
+                        await fetch(this.gateway + cid)
+                            .then(response => response.text())
+                            .then(data => this.renderPost(cid, time, data))
+                    }
+                }, delay)
             } else {
-                // Getting posts from gateway
+                // Getting post from gateway
                 await fetch(this.gateway + cid)
                     .then(response => response.text())
                     .then(data => this.renderPost(cid, time, data))
