@@ -13,12 +13,11 @@ class Tweets {
     loadData = []
     node = null
     html = ''
-    gateway = 'https://ipfs.io/ipfs/'
+    gateway = 'https://gateway.ipfs.cybernode.ai/ipfs/'
 
 
     async initNode() {
         this.node = await Ipfs.create({
-            // repo: 'ipfs-repo-cyber',
             init: true,
             start: true,
             relay: {
