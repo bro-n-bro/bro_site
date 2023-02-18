@@ -748,17 +748,18 @@
 
     .partners .row > *
     {
-        margin-left: 24px;
-        margin-bottom: 24px;
         width: calc(20% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
     }
 
 
     .partners .item
     {
-        border-radius: 40px;
-        padding: 20px;
         height: 152px;
+        padding: 20px;
+
+        border-radius: 40px;
     }
 }
 
@@ -1392,16 +1393,17 @@
     .partners .row > *
     {
         width: calc(33.333% - 20px);
-        margin-left: 20px;
         margin-bottom: 20px;
+        margin-left: 20px;
     }
 
 
     .partners .item
     {
-        border-radius: 32px;
-        padding: 16px;
         height: 132px;
+        padding: 16px;
+
+        border-radius: 32px;
     }
 }
 
