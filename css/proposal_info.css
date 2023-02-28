@@ -1,0 +1,145 @@
+.first_section .proposal_info .title
+{
+    font-size: 52px;
+    line-height: 61px;
+}
+
+
+.first_section .proposal_info .desc
+{
+    color: #fff;
+    font-size: 20px;
+    line-height: 140%;
+
+    width: 600px;
+    max-width: 100%;
+    margin: 24px auto 0;
+
+    font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
+}
+
+
+.first_section .proposal_info .btns
+{
+    display: flex;
+
+    margin-top: 40px;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.first_section .proposal_info .btn
+{
+    color: currentColor;
+    font-weight: 600;
+    line-height: 19px;
+
+    min-width: 160px;
+    padding: 16px 40px;
+
+    transition: .2s linear;
+    text-decoration: none;
+
+    border-radius: 140px;
+    background: #950fff;
+}
+
+
+
+@media print,
+(max-width: 1439px)
+{
+    .first_section .proposal_info .desc
+    {
+        font-size: 19px;
+
+        width: 556px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .first_section .proposal_info .title
+    {
+        font-size: 46px;
+        line-height: 56px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .first_section .proposal_info .title
+    {
+        font-size: 46px;
+        line-height: 52px;
+    }
+
+
+    .first_section .proposal_info .desc
+    {
+        font-size: 18px;
+
+        width: 530px;
+    }
+
+
+    .first_section .proposal_info .btns
+    {
+        margin-top: 24px;
+    }
+
+    .first_section .proposal_info .btn
+    {
+        line-height: 18px;
+
+        padding: 16px 28px;
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    .first_section .proposal_info .title
+    {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+
+    .first_section .proposal_info .desc
+    {
+        font-size: 16px;
+
+        width: 384px;
+    }
+}
+
+
+
+@media print,
+(max-width: 479px)
+{
+    .first_section .proposal_info .title
+    {
+        font-size: 35px;
+        line-height: 43px;
+    }
+
+
+    .first_section .proposal_info .btn
+    {
+        padding: 14px 24px;
+    }
+}
