@@ -59,7 +59,11 @@ class Tweets {
 
         await fetch(this.loadURL)
             .then(response => response.json())
-            .then(data => this.loadData = data.txs.sort((a, b) => Date.parse(b.timestamp) - Date.parse(a.timestamp)))
+            .then(data => {
+                if(data.total_count != '0') {
+                    this.loadData = data.txs.sort((a, b) => Date.parse(b.timestamp) - Date.parse(a.timestamp))
+                }
+            })
     }
 
 
