@@ -83,35 +83,35 @@ class Tweets {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
-                })
+                }),
+                className = this.preRenderPost(cid)
 
             if (this.node !== null) {
-                // Getting posts from ipfs
-                let className = this.preRenderPost(cid),
-                    delay = 10000,
+                let delay = 5000,
                     postStatus = false
 
-                for await (const message of await all(this.node.cat(cid))) {
+                // Getting post from gateway
+                setTimeout(() => {
+                    if (!postStatus) {
+                        fetch(this.gateway + cid)
+                            .then(response => response.text())
+                            .then(data => this.renderPost(cid, time, data, className))
+                    }
+                }, delay)
+
+                // Getting posts from ipfs node
+                for (const message of await all(this.node.cat(cid))) {
                     let data = new TextDecoder().decode(message)
 
                     this.renderPost(cid, time, data, className)
 
                     postStatus = true
                 }
-
-                setTimeout(async () => {
-                    // Getting post from gateway
-                    if (!postStatus) {
-                        await fetch(this.gateway + cid)
-                            .then(response => response.text())
-                            .then(data => this.renderPost(cid, time, data))
-                    }
-                }, delay)
             } else {
                 // Getting post from gateway
-                await fetch(this.gateway + cid)
+                fetch(this.gateway + cid)
                     .then(response => response.text())
-                    .then(data => this.renderPost(cid, time, data))
+                    .then(data => this.renderPost(cid, time, data, className))
             }
         })
     }
@@ -124,10 +124,11 @@ class Tweets {
             tweetsEl.innerHTML += String()
                 + '<div class="item ' + className + '">'
                 + '<div class="cid">' + cid + '</div>'
+                + '<div class="loader"><span></span></div>'
                 + '</div>'
 
             // Hiding the loader
-            const loader = blog.querySelector('.loader')
+            const loader = blog.querySelector('.main_loader')
             if (loader) { loader.remove() }
 
             return className
@@ -172,37 +173,12 @@ class Tweets {
             currentIndex
 
         if (urlCID) {
-            // Date definition
+            // Get current index
             for (const [i, el] of this.loadData.entries()) {
                 if (urlCID == el.tx.value.msg[0].value.links[0].to) {
                     currentIndex = i
-
-                    // Getting post date
-                    let time = new Date(el.timestamp).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    })
-
-                    article.querySelector('.date').innerText = time
-
-                    // Getting post content
-                    if (this.node !== null) {
-                        // Getting post from ipfs
-                        for await (const message of await all(this.node.cat(urlCID))) {
-                            let item = new TextDecoder().decode(message)
-
-                            article.querySelector('.text_block').innerHTML = marked.parse(item)
-                        }
-                    } else {
-                        // Getting post from gateway
-                        await fetch(this.gateway + urlCID)
-                            .then(response => response.text())
-                            .then(data => article.querySelector('.text_block').innerHTML = marked.parse(data))
-                    }
                 }
             }
-
 
             // Prev/Next
             let prevIndex = (currentIndex - 1 < 0) ? this.loadData.length - 1 : currentIndex - 1,
@@ -233,6 +209,56 @@ class Tweets {
             })
 
 
+            // Date definition
+            for (const [i, el] of this.loadData.entries()) {
+                if (urlCID == el.tx.value.msg[0].value.links[0].to) {
+                    // Getting post date
+                    let time = new Date(el.timestamp).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })
+
+                    article.querySelector('.date').innerText = time
+
+                    // Getting post content
+                    if (this.node !== null) {
+                        let delay = 5000,
+                            postStatus = false
+
+                        // Getting post from gateway
+                        setTimeout(() => {
+                            if (!postStatus) {
+                                fetch(this.gateway + urlCID)
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        article.querySelector('.text_block').innerHTML = marked.parse(data)
+
+                                        // Hiding the loader
+                                        const loader = article.querySelector('.loader')
+                                        if (loader) { loader.remove() }
+                                    })
+                            }
+                        }, delay)
+
+                        // Getting post from ipfs
+                        for (const message of await all(this.node.cat(urlCID))) {
+                            let item = new TextDecoder().decode(message)
+
+                            article.querySelector('.text_block').innerHTML = marked.parse(item)
+
+                            postStatus = true
+                        }
+                    } else {
+                        // Getting post from gateway
+                        fetch(this.gateway + urlCID)
+                            .then(response => response.text())
+                            .then(data => article.querySelector('.text_block').innerHTML = marked.parse(data))
+                    }
+                }
+            }
+
+
             // Hiding the loader
             const loader = article.querySelector('.loader')
             if (loader) { loader.remove() }
@@ -243,7 +269,7 @@ class Tweets {
 
 
 const all = async source => {
-    const arr = []
+    let arr = []
 
     for await (const entry of source) {
         arr.push(entry)
