@@ -9,7 +9,8 @@ class Tweets {
     neuron = 'bostrom1ndwqfv2skglrmsqu4wlneepthyrquf9r7sx6r0'
     particleFrom = 'QmbdH2WBamyKLPE5zu4mJ9v49qvY8BFfoumoVPMR5V4Rvx'
     limit = 1000
-    loadURL = `https://lcd.bostrom.bronbro.io/txs?cyberlink.neuron=${this.neuron}&cyberlink.particleFrom=${this.particleFrom}&limit=${this.limit}`
+    loadURL = `https://lcd.bostrom.bronbro.io/cosmos/tx/v1beta1/txs?pagination.offset=0&pagination.limit=${this.limit}&orderBy=ORDER_BY_DESC&events=message.sender%3D%27${this.neuron}%27&events=cyberlink.particleFrom%3D%27${this.particleFrom}%27`
+    // loadURL = `https://lcd.bostrom.bronbro.io/txs?cyberlink.neuron=${this.neuron}&cyberlink.particleFrom=${this.particleFrom}&limit=${this.limit}`
     loadData = []
     node = null
     html = ''
@@ -61,7 +62,7 @@ class Tweets {
             .then(response => response.json())
             .then(data => {
                 if(data.total_count != '0') {
-                    this.loadData = data.txs.sort((a, b) => Date.parse(b.timestamp) - Date.parse(a.timestamp))
+                    this.loadData = data.tx_responses.sort((a, b) => Date.parse(b.timestamp) - Date.parse(a.timestamp))
                 }
             })
     }
@@ -78,7 +79,7 @@ class Tweets {
             : sliceArray = this.loadData
 
         sliceArray.forEach(async el => {
-            let cid = el.tx.value.msg[0].value.links[0].to,
+            let cid = el.tx.body.messages[0].links[0].to,
                 time = new Date(el.timestamp).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
@@ -175,7 +176,7 @@ class Tweets {
         if (urlCID) {
             // Get current index
             for (const [i, el] of this.loadData.entries()) {
-                if (urlCID == el.tx.value.msg[0].value.links[0].to) {
+                if (urlCID == el.tx.body.messages[0].links[0].to) {
                     currentIndex = i
                 }
             }
@@ -184,9 +185,9 @@ class Tweets {
             let prevIndex = (currentIndex - 1 < 0) ? this.loadData.length - 1 : currentIndex - 1,
                 nextIndex = (currentIndex + 1 > this.loadData.length - 1) ? 0 : currentIndex + 1
 
-            article.querySelector('.prev_link').setAttribute('href', `./blog_item.html?cid=${this.loadData[prevIndex].tx.value.msg[0].value.links[0].to}`)
+            article.querySelector('.prev_link').setAttribute('href', `./blog_item.html?cid=${this.loadData[prevIndex].tx.body.messages[0].links[0].to}`)
 
-            article.querySelector('.next_link').setAttribute('href', `./blog_item.html?cid=${this.loadData[nextIndex].tx.value.msg[0].value.links[0].to}`)
+            article.querySelector('.next_link').setAttribute('href', `./blog_item.html?cid=${this.loadData[nextIndex].tx.body.messages[0].links[0].to}`)
 
 
             // Adding Link Attributes
@@ -211,7 +212,7 @@ class Tweets {
 
             // Date definition
             for (const [i, el] of this.loadData.entries()) {
-                if (urlCID == el.tx.value.msg[0].value.links[0].to) {
+                if (urlCID == el.tx.body.messages[0].links[0].to) {
                     // Getting post date
                     let time = new Date(el.timestamp).toLocaleDateString('en-US', {
                         year: 'numeric',
