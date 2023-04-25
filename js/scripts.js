@@ -378,9 +378,9 @@ const ATOMInit = async () => {
 			.then(response => response.json())
 			.then(data => {
 				let tokensArr = data.result.map(el => el.tokens),
-					sepPostion = tokensArr.sort((a, b) => b - a)[174] / tokensArr.sort((a, b) => b - a)[99]
+					sepPostion = tokensArr.sort((a, b) => b - a)[174] / tokensArr.sort((a, b) => b - a)[49]
 
-				maxTokens = tokensArr.sort((a, b) => b - a)[99] / 1000000
+				maxTokens = tokensArr.sort((a, b) => b - a)[49] / 1000000
 
 				ATOMInfo.querySelector('.progress .active_set_text').style.left = sepPostion * 100 + '%'
 				ATOMInfo.querySelector('.progress .max').textContent = parseInt(maxTokens).toLocaleString()
