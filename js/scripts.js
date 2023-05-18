@@ -1,5 +1,5 @@
 // Load font
-addStylesheetURL('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+addStylesheetURL('https://fonts.googleapis.com/css2?family=Ranchers&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
 
 
 const mobMenuBtn = document.querySelector('.mob_menu_btn'),
@@ -400,4 +400,16 @@ const ATOMInit = async () => {
 if (ATOMInfo) {
 	ATOMInit()
 	setInterval(async () => ATOMInit(), 7000)
+}
+
+
+// Parallax
+if (WW > 1023) {
+	const parallax = document.getElementById('parallax')
+
+	if (parallax) {
+		new Parallax(parallax)
+
+		parallax.classList.add('show')
+	}
 }

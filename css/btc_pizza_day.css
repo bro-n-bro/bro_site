@@ -1,0 +1,491 @@
+.btc_pizza_day
+{
+    position: relative;
+    z-index: 3;
+
+    padding: 220px 0 100px;
+}
+
+
+.btc_pizza_day .cont
+{
+    position: relative;
+    z-index: 5;
+
+    max-width: 1326px;
+}
+
+
+.btc_pizza_day .data
+{
+    width: 684px;
+    max-width: 100%;
+}
+
+
+.btc_pizza_day .title
+{
+    font-family: 'Ranchers', 'Arial', sans-serif;
+    font-size: 118px;
+    line-height: 120%;
+}
+
+
+.btc_pizza_day .desc
+{
+    font-size: 24px;
+    line-height: 120%;
+
+    margin-top: 16px;
+}
+
+.btc_pizza_day .desc b
+{
+    color: #950fff;
+}
+
+
+.btc_pizza_day .btns
+{
+    display: flex;
+
+    margin-top: 36px;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.btc_pizza_day .btns a
+{
+    color: currentColor;
+    font-family: 'Ranchers', 'Arial', sans-serif;
+    font-size: 30px;
+    line-height: 100%;
+
+    display: flex;
+
+    padding: 16px;
+
+    text-decoration: none;
+    letter-spacing: .04em;
+
+    border-radius: 140px;
+    background: #950fff;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.btc_pizza_day .btns a > * + *
+{
+    margin-left: 8px;
+}
+
+
+.btc_pizza_day .btns a img
+{
+    display: block;
+
+    width: 30px;
+    height: 30px;
+}
+
+
+.btc_pizza_day .img
+{
+    position: absolute;
+    z-index: 2;
+    right: 50%;
+    bottom: -28px;
+
+    display: block;
+
+    width: 862px;
+    height: 855px;
+    margin-right: -760px;
+
+    pointer-events: none;
+}
+
+
+.btc_pizza_day .bg
+{
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    bottom: -568px;
+
+    display: block;
+
+    width: 2175px;
+    height: 1471px;
+    margin-right: -1375px;
+
+    pointer-events: none;
+}
+
+.btc_pizza_day .bg.loaded
+{
+    opacity: .7;
+}
+
+
+.btc_pizza_day .parallax
+{
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition: opacity .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.btc_pizza_day .parallax.show
+{
+    opacity: 1;
+}
+
+
+.btc_pizza_day .parallax .layer
+{
+    position: absolute !important;
+}
+
+.btc_pizza_day .parallax .layer1
+{
+    top: 140px !important;
+    left: 50% !important;
+
+    width: 295px;
+    height: 259px;
+    margin-left: 120px;
+}
+
+.btc_pizza_day .parallax .layer2
+{
+    top: 300px !important;
+    left: 50% !important;
+
+    width: 256px;
+    height: 240px;
+    margin-left: 480px;
+}
+
+.btc_pizza_day .parallax .layer3
+{
+    top: 280px !important;
+    left: 50% !important;
+
+    width: 14px;
+    height: 20px;
+    margin-left: 520px;
+}
+
+.btc_pizza_day .parallax .layer4
+{
+    top: 480px !important;
+    left: 50% !important;
+
+    width: 43px;
+    height: 55px;
+    margin-left: 280px;
+}
+
+.btc_pizza_day .parallax .layer5
+{
+    top: 460px !important;
+    left: 50% !important;
+
+    width: 51px;
+    height: 62px;
+    margin-left: 440px;
+}
+
+.btc_pizza_day .parallax .layer6
+{
+    top: 500px !important;
+    left: 50% !important;
+
+    width: 14px;
+    height: 21px;
+    margin-left: 712px;
+}
+
+.btc_pizza_day .parallax .layer7
+{
+    top: 620px !important;
+    left: 50% !important;
+
+    width: 63px;
+    height: 78px;
+    margin-left: 280px;
+}
+
+.btc_pizza_day .parallax .layer8
+{
+    top: 20px !important;
+    left: 50% !important;
+
+    width: 862px;
+    height: 855px;
+    margin-left: -108px;
+}
+
+
+.btc_pizza_day .parallax .layer img
+{
+    display: block;
+
+    width: 100%;
+}
+
+
+
+@media print,
+(max-width: 1439px)
+{
+    .btc_pizza_day .cont
+    {
+        padding: 0 20px;
+    }
+
+
+    .btc_pizza_day .data
+    {
+        width: 644px;
+    }
+
+
+    .btc_pizza_day .title
+    {
+        font-size: 100px;
+    }
+
+
+    .btc_pizza_day .desc
+    {
+        font-size: 20px;
+        line-height: 140%;
+
+        margin-top: 24px;
+    }
+
+
+    .btc_pizza_day .btns a
+    {
+        font-size: 26px;
+    }
+
+
+    .btc_pizza_day .parallax
+    {
+        top: 0;
+        left: -24px;
+
+        transform: scale(.9) !important;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .btc_pizza_day
+    {
+        padding: 200px 0 80px;
+    }
+
+
+    .btc_pizza_day .data
+    {
+        width: 544px;
+    }
+
+
+    .btc_pizza_day .title
+    {
+        font-size: 90px;
+    }
+
+
+    .btc_pizza_day .desc
+    {
+        font-size: 18px;
+    }
+
+
+    .btc_pizza_day .btns a
+    {
+        font-size: 24px;
+    }
+
+
+    .btc_pizza_day .parallax
+    {
+        left: -40px;
+
+        transform: scale(.75) !important;
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .btc_pizza_day
+    {
+        padding: 180px 0 80px;
+    }
+
+
+    .btc_pizza_day .data
+    {
+        width: 424px;
+    }
+
+
+    .btc_pizza_day .title
+    {
+        font-size: 70px;
+    }
+
+
+    .btc_pizza_day .desc
+    {
+        font-size: 16px;
+    }
+
+
+    .btc_pizza_day .btns a
+    {
+        font-size: 22px;
+    }
+
+
+    .btc_pizza_day .parallax
+    {
+        top: -28px;
+        left: -80px;
+
+        transform: scale(.65) !important;
+
+        opacity: 1;
+    }
+
+
+    .btc_pizza_day .bg
+    {
+        right: auto;
+        bottom: -180px;
+        left: -40px;
+
+        width: 1440px;
+        height: 974px;
+        margin-right: 0;
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    .btc_pizza_day
+    {
+        padding: 170px 0 60px;
+    }
+
+
+    .btc_pizza_day .data
+    {
+        width: 100%;
+    }
+
+
+    .btc_pizza_day .title
+    {
+        font-size: 52px;
+    }
+
+
+    .btc_pizza_day .desc
+    {
+        font-size: 15px;
+
+        margin-top: 20px;
+    }
+
+
+    .btc_pizza_day .btns
+    {
+        margin-top: 24px;
+    }
+
+    .btc_pizza_day .btns a
+    {
+        font-size: 20px;
+
+        width: 100%;
+    }
+
+
+    .btc_pizza_day .parallax
+    {
+        top: -140px;
+        left: 0;
+
+        transform: scale(.35) translateX(-15%) !important;
+
+        opacity: .7;
+    }
+
+
+    .btc_pizza_day .bg
+    {
+        right: auto;
+        bottom: -180px;
+        left: -40px;
+
+        width: 1000px;
+        height: auto;
+        margin-right: 0;
+    }
+}
+
+
+
+@media print,
+(max-width: 479px)
+{
+    .btc_pizza_day
+    {
+        padding: 150px 0 60px;
+    }
+
+
+    .btc_pizza_day .parallax
+    {
+        transform: scale(.3) translateX(-15%) !important;
+    }
+
+
+    .btc_pizza_day .btns a
+    {
+        font-size: 18px;
+
+        padding: 14px;
+    }
+}
