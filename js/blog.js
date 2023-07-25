@@ -9,8 +9,8 @@ class Tweets {
     neuron = 'bostrom1ndwqfv2skglrmsqu4wlneepthyrquf9r7sx6r0'
     particleFrom = 'QmbdH2WBamyKLPE5zu4mJ9v49qvY8BFfoumoVPMR5V4Rvx'
     limit = 1000
-    loadURL = `https://lcd.bostrom.bronbro.io/cosmos/tx/v1beta1/txs?pagination.offset=0&pagination.limit=${this.limit}&orderBy=ORDER_BY_DESC&events=message.sender%3D%27${this.neuron}%27&events=cyberlink.particleFrom%3D%27${this.particleFrom}%27`
-    // loadURL = `https://lcd.bostrom.bronbro.io/txs?cyberlink.neuron=${this.neuron}&cyberlink.particleFrom=${this.particleFrom}&limit=${this.limit}`
+    // loadURL = `https://lcd.bostrom.bronbro.io/cosmos/tx/v1beta1/txs?pagination.offset=0&pagination.limit=${this.limit}&orderBy=ORDER_BY_DESC&events=message.sender%3D%27${this.neuron}%27&events=cyberlink.particleFrom%3D%27${this.particleFrom}%27`
+    loadURL = `https://lcd.bostrom.cybernode.ai/cosmos/tx/v1beta1/txs?pagination.offset=0&pagination.limit=${this.limit}&orderBy=ORDER_BY_DESC&events=message.sender%3D%27${this.neuron}%27&events=cyberlink.particleFrom%3D%27${this.particleFrom}%27`
     loadData = []
     node = null
     html = ''
