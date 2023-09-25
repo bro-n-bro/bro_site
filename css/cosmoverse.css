@@ -1,0 +1,553 @@
+.cosmoverse
+{
+    position: relative;
+    z-index: 3;
+
+    padding: 156px 0 75px;
+}
+
+
+.cosmoverse .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.cosmoverse .head
+{
+    display: flex;
+
+    margin-bottom: 34px;
+    padding: 0 100px;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.cosmoverse .head .label
+{
+    font-weight: 500;
+    line-height: 90%;
+
+    margin-right: auto;
+}
+
+
+.cosmoverse .head .location
+{
+    font-size: 18px;
+    line-height: 24px;
+
+    display: flex;
+
+    padding: 17px 21px;
+
+    border-radius: 50px;
+    background: #1b1b1b;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;;
+}
+
+.cosmoverse .head .location .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+}
+
+
+.cosmoverse .head .date
+{
+    font-size: 18px;
+    line-height: 24px;
+
+    display: flex;
+
+    margin-left: 16px;
+    padding: 17px 21px;
+
+    border-radius: 50px;
+    background: #1b1b1b;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;;
+}
+
+.cosmoverse .head .date .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+}
+
+
+.cosmoverse .head .time
+{
+    font-size: 18px;
+    line-height: 24px;
+
+    display: flex;
+
+    margin-left: 16px;
+    padding: 17px 21px;
+
+    border-radius: 50px;
+    background: #1b1b1b;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;;
+}
+
+.cosmoverse .head .time .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+}
+
+
+.cosmoverse .row
+{
+    padding: 0 100px;
+}
+
+
+.cosmoverse .data
+{
+    width: 640px;
+    max-width: 100%;
+    padding-top: 4px;
+}
+
+
+.cosmoverse .title
+{
+    font-size: 130px;
+    font-weight: 800;
+    line-height: 90%;
+}
+
+
+.cosmoverse .link
+{
+    margin-top: 48px;
+}
+
+
+.cosmoverse .link a
+{
+    color: currentColor;
+    font-weight: 600;
+
+    display: inline-block;
+
+    padding: 17px 30px;
+
+    transition: background .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    border-radius: 140px;
+    background: #950fff;
+}
+
+.cosmoverse .link a:hover
+{
+    background: #7700e1;
+}
+
+
+.cosmoverse .image
+{
+    width: 491px;
+    max-width: 100%;
+    margin-left: auto;
+}
+
+.cosmoverse .image img
+{
+    display: block;
+
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.cosmoverse .bg
+{
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    bottom: -8px;
+
+    width: 1065px;
+    height: 595px;
+    margin-right: -654px;
+
+    pointer-events: none;
+}
+
+
+
+@media print,
+(max-width: 1439px)
+{
+    .cosmoverse .head,
+    .cosmoverse .row
+    {
+        padding: 0 52px;
+    }
+
+
+    .cosmoverse .head
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .cosmoverse .head .location,
+    .cosmoverse .head .date,
+    .cosmoverse .head .time
+    {
+        font-size: 16px;
+        line-height: 22px;
+
+        padding: 12px 20px;
+    }
+
+
+    .cosmoverse .data
+    {
+        width: 600px;
+    }
+
+
+    .cosmoverse .title
+    {
+        font-size: 110px;
+    }
+
+
+    .cosmoverse .link
+    {
+        margin-top: 40px;
+    }
+
+    .cosmoverse .link a
+    {
+        padding: 16px 28px;
+    }
+
+
+    .cosmoverse .image
+    {
+        width: 460px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .cosmoverse
+    {
+        padding: 144px 0 68px;
+    }
+
+
+    .cosmoverse .head,
+    .cosmoverse .row
+    {
+        padding: 0 22px;
+    }
+
+
+    .cosmoverse .head
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .cosmoverse .head .location,
+    .cosmoverse .head .date,
+    .cosmoverse .head .time
+    {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .cosmoverse .head .location .icon,
+    .cosmoverse .head .date .icon,
+    .cosmoverse .head .time .icon
+    {
+        width: 22px;
+        height: 22px;
+        margin-right: 12px;
+    }
+
+
+    .cosmoverse .data
+    {
+        width: 480px;
+    }
+
+
+    .cosmoverse .title
+    {
+        font-size: 95px;
+    }
+
+
+    .cosmoverse .image
+    {
+        width: 400px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .cosmoverse
+    {
+        padding: 132px 0 68px;
+    }
+
+
+    .cosmoverse .head,
+    .cosmoverse .row
+    {
+        padding: 0 24px;
+    }
+
+
+    .cosmoverse .head .label
+    {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+
+    .cosmoverse .head .location,
+    .cosmoverse .head .date,
+    .cosmoverse .head .time
+    {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .cosmoverse .head .location .icon,
+    .cosmoverse .head .date .icon,
+    .cosmoverse .head .time .icon
+    {
+        width: 22px;
+        height: 22px;
+        margin-right: 12px;
+    }
+
+
+    .cosmoverse .data
+    {
+        width: 100%;
+
+        text-align: center;
+
+        order: 1;
+    }
+
+
+    .cosmoverse .title
+    {
+        font-size: 76px;
+        line-height: 100%;
+    }
+
+    .cosmoverse .title br
+    {
+        display: none;
+    }
+
+
+    .cosmoverse .image
+    {
+        width: 300px;
+        margin: 0 auto 40px;
+    }
+
+
+    .cosmoverse .bg
+    {
+        right: 0;
+        bottom: 92px;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    .cosmoverse
+    {
+        padding-bottom: 60px;
+    }
+
+
+    .cosmoverse .head .label
+    {
+        text-align: center;
+    }
+
+
+    .cosmoverse .head .location
+    {
+        width: 100%;
+        margin-bottom: 10px;
+
+        justify-content: center;
+    }
+
+    .cosmoverse .head .date,
+    .cosmoverse .head .time
+    {
+        width: calc(50% - 5px);
+
+        justify-content: center;
+    }
+
+    .cosmoverse .head .date
+    {
+        margin-left: 0;
+    }
+
+    .cosmoverse .head .time
+    {
+        margin-left: auto;
+    }
+
+    .cosmoverse .head .location .icon,
+    .cosmoverse .head .date .icon,
+    .cosmoverse .head .time .icon
+    {
+        width: 22px;
+        height: 22px;
+        margin-right: 12px;
+    }
+
+
+    .cosmoverse .data
+    {
+        width: 100%;
+
+        text-align: center;
+
+        order: 1;
+    }
+
+
+    .cosmoverse .title
+    {
+        font-size: 48px;
+    }
+
+
+    .cosmoverse .image
+    {
+        width: 180px;
+        margin-bottom: 24px;
+    }
+
+
+    .cosmoverse .link
+    {
+        margin-top: 32px;
+    }
+
+
+    .cosmoverse .bg
+    {
+        bottom: 12px;
+    }
+}
+
+
+
+@media print,
+(max-width: 479px)
+{
+    .cosmoverse
+    {
+        padding-top: 120px;
+    }
+
+
+    .cosmoverse .head .location,
+    .cosmoverse .head .date,
+    .cosmoverse .head .time
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .cosmoverse .head .location .icon,
+    .cosmoverse .head .date .icon,
+    .cosmoverse .head .time .icon
+    {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+
+    .cosmoverse .data
+    {
+        width: 100%;
+
+        text-align: center;
+
+        order: 1;
+    }
+
+
+    .cosmoverse .title
+    {
+        font-size: 36px;
+    }
+
+
+    .cosmoverse .image
+    {
+        width: 160px;
+    }
+
+
+    .cosmoverse .link
+    {
+        margin-top: 28px;
+    }
+}
