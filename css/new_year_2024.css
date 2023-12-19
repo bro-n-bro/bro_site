@@ -1,0 +1,285 @@
+.new_year
+{
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    margin-bottom: -74px;
+    padding: 0 !important;
+}
+
+
+.new_year .cont
+{
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    height: 100vh;
+    padding-top: 220px;
+    padding-bottom: 164px;
+}
+
+
+.new_year .data
+{
+    align-self: center;
+
+    width: 645px;
+    max-width: calc(50% - 24px);
+    padding-left: 100px;
+
+    text-align: left;
+}
+
+
+.new_year .pre_title
+{
+    line-height: normal;
+
+    margin-bottom: 24px;
+
+    letter-spacing: -.18px;
+}
+
+
+.new_year .atom_info .title
+{
+    line-height: normal;
+}
+
+
+.new_year .atom_info .desc
+{
+    margin-top: 30px;
+}
+
+
+.new_year .atom_info .progress
+{
+    margin-top: 44px;
+}
+
+
+.new_year .atom_info .btns
+{
+    width: 332px;
+    max-width: 100%;
+    margin-top: 36px;
+}
+
+
+.new_year .atom_info .btns .or
+{
+    margin: 0 auto;
+}
+
+
+.new_year .atom_info .btns .exp
+{
+    text-align: center;
+}
+
+
+.new_year .img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 50%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+@media print,
+(max-width: 1439px)
+{
+    .new_year
+    {
+        margin-bottom: -60px;
+    }
+
+
+    .new_year .cont
+    {
+        height: auto;
+        padding-top: 200px;
+        padding-bottom: 124px;
+    }
+
+
+    .new_year .data
+    {
+        width: 597px;
+        padding-left: 52px;
+    }
+
+
+    .new_year .pre_title
+    {
+        font-size: 16px;
+    }
+
+
+    .new_year .atom_info .title
+    {
+        font-size: 44px;
+    }
+
+
+    .new_year .atom_info .desc,
+    .new_year .atom_info .btns .exp
+    {
+        font-size: 16px;
+
+        margin-top: 20px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    .new_year
+    {
+        margin-bottom: -40px;
+    }
+
+
+    .new_year .cont
+    {
+        padding-top: 168px;
+        padding-bottom: 100px;
+    }
+
+
+    .new_year .data
+    {
+        width: calc(50% - 24px);
+        padding-left: 32px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    .new_year .cont
+    {
+        padding-top: 168px !important;
+        padding-bottom: 100px !important;
+    }
+
+
+    .new_year .data
+    {
+        padding-left: 0;
+    }
+
+
+    .new_year .atom_info .title
+    {
+        font-size: 36px;
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    .new_year .cont
+    {
+        padding-top: 160px !important;
+        padding-bottom: 40px!important;
+    }
+
+
+    .new_year .data
+    {
+        width: 100%;
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+
+    .new_year .pre_title
+    {
+        font-size: 15px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .new_year .atom_info .title
+    {
+        font-size: 32px;
+
+        padding: 0 40px;
+    }
+
+
+    .new_year .atom_info .btns
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+    .new_year .atom_info .btns .or
+    {
+        margin: 0 20px;
+    }
+
+
+    .new_year .atom_info .desc,
+    .new_year .atom_info .btns .exp
+    {
+        font-size: 14px;
+    }
+
+
+    .new_year .img
+    {
+        position: relative;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+@media print,
+(max-width: 479px)
+{
+    .new_year .cont
+    {
+        padding-top: 124px !important;
+        padding-bottom: 40px!important;
+    }
+
+
+    .new_year .atom_info .title
+    {
+        font-size: 32px;
+
+        padding: 0;
+    }
+}
