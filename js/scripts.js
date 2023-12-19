@@ -68,11 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
 				.then(data => {
 					// Networks validated
 					const networksValidatedEl = document.querySelector('.stats .networks_validated'),
+						networksValidatedEl2 = document.querySelector('.networks .block_head .desc'),
 						networksCountEl = document.querySelector('.networks .block_head .desc .count')
 
 					if (networksValidatedEl) {
 						networksValidatedEl.querySelector('.countUp').textContent = data.networks_validated
 						networksValidatedEl.querySelector('.hide').textContent = data.networks_validated
+						networksValidatedEl2.querySelector('.count').textContent = data.networks_validated
 					}
 
 					if (networksCountEl) {
