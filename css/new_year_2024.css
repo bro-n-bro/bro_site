@@ -9,6 +9,18 @@
 }
 
 
+#snow
+{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
 .new_year .cont
 {
     position: relative;
@@ -44,6 +56,7 @@
 
     margin-bottom: 24px;
 
+    text-align: center;
     letter-spacing: -.18px;
 }
 
@@ -56,13 +69,13 @@
 
 .new_year .atom_info .desc
 {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 
 .new_year .atom_info .progress
 {
-    margin-top: 44px;
+    margin-top: 60px;
 }
 
 
@@ -70,7 +83,7 @@
 {
     width: 332px;
     max-width: 100%;
-    margin-top: 36px;
+    margin: 40px auto 0;
 }
 
 
