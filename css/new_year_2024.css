@@ -64,12 +64,16 @@
 .new_year .atom_info .title
 {
     line-height: normal;
+
+    text-align: center;
 }
 
 
 .new_year .atom_info .desc
 {
     margin-top: 20px;
+
+    text-align: center;
 }
 
 
