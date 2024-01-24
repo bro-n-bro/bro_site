@@ -1,3 +1,10 @@
+.first_section .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
 .first_section .atom_info .title
 {
     font-size: 52px;
@@ -7,13 +14,14 @@
 
 .first_section .atom_info .desc
 {
-    color: #fff;
     font-size: 20px;
     line-height: 140%;
 
     width: 588px;
     max-width: 100%;
     margin: 20px auto 0;
+
+    color: #fff;
 
     font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
@@ -24,15 +32,14 @@
     position: relative;
 
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     width: 580px;
     max-width: 100%;
     margin: 40px auto 0;
-
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 
@@ -61,7 +68,6 @@
 
 .first_section .atom_info .progress .active_set_text
 {
-    color: #464646;
     line-height: 140%;
 
     position: absolute;
@@ -73,6 +79,8 @@
     transition: left .2s linear;
     transform: translateX(-50%);
     white-space: nowrap;
+
+    color: #464646;
 }
 
 .first_section .atom_info .progress .active_set_text:before
@@ -98,12 +106,13 @@
 .first_section .atom_info .progress .current,
 .first_section .atom_info .progress .max
 {
-    color: #464646;
     line-height: 140%;
 
     margin-top: 10px;
 
     white-space: nowrap;
+
+    color: #464646;
 
     font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
@@ -112,19 +121,17 @@
 .first_section .atom_info .btns
 {
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     margin-top: 30px;
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 
 .first_section .atom_info .btn
 {
-    color: currentColor;
     font-weight: 600;
     line-height: 19px;
 
@@ -133,6 +140,7 @@
     transition: .2s linear;
     text-decoration: none;
 
+    color: currentColor;
     border-radius: 140px;
     background: #353535;
 }
@@ -160,6 +168,19 @@
 
     width: 100%;
     margin-top: 20px;
+}
+
+
+
+#snow
+{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
 }
 
 
