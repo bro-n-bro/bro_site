@@ -134,14 +134,12 @@ input[type=number]
 ::selection
 {
     color: #fff;
-
     background: #950fff;
 }
 
 ::-moz-selection
 {
     color: #fff;
-
     background: #950fff;
 }
 
@@ -194,13 +192,14 @@ html.custom_scroll
 
 body
 {
-    color: var(--text_color);
     font: var(--font_size) var(--font_family);
 
     height: 100%;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
     min-height:         fill-available;
+
+    color: var(--text_color);
 }
 
 body.pointer
@@ -226,7 +225,6 @@ body.menu_open
 
 button
 {
-    color: inherit;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -237,6 +235,7 @@ button
     cursor: pointer;
     vertical-align: top;
 
+    color: inherit;
     border: none;
     background: none;
 }
@@ -261,9 +260,8 @@ button
 .main
 {
     display: flex;
-    flex-direction: column;
-
     flex: 1 0 auto;
+    flex-direction: column;
 }
 
 
@@ -291,11 +289,10 @@ button
 .row
 {
     display: flex;
-
-    justify-content: flex-start;
-    align-items: flex-start;
     align-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 
@@ -312,6 +309,10 @@ button
     left: 0;
 
     display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     width: 100%;
     height: 100%;
@@ -320,11 +321,6 @@ button
     text-align: center;
 
     background: #fff;
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 .supports_error.show
@@ -347,7 +343,6 @@ button
 
 .all_link a
 {
-    color: var(--text_color);
     font-weight: 600;
     line-height: 19px;
 
@@ -359,6 +354,7 @@ button
     vertical-align: top;
     text-decoration: none;
 
+    color: var(--text_color);
     border-radius: 40px;
     background: #353535;
 }
@@ -504,15 +500,14 @@ button
 .block_head
 {
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     width: 1312px;
     max-width: 100%;
     margin: 0 auto 60px;
-
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 
@@ -531,13 +526,13 @@ button
 
 .block_head .title a
 {
-    color: currentColor;
-
     display: inline-block;
 
     transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
+
+    color: currentColor;
 }
 
 .block_head .title a:hover
@@ -548,12 +543,13 @@ button
 
 .block_head .desc
 {
-    color: #fff;
     font-size: calc(var(--font_size) + 2px);
     line-height: 170%;
 
     width: calc(100% - 430px);
     margin-left: auto;
+
+    color: #fff;
 }
 
 
@@ -736,11 +732,10 @@ button
 
 .text_block a
 {
-    color: #950fff;
-
     transition: background-size .3s;
     text-decoration: none;
 
+    color: #950fff;
     background-image: linear-gradient(currentColor, currentColor);
     background-repeat: no-repeat;
     background-position: 0 100%;
@@ -760,23 +755,21 @@ button
 
 .stats .data
 {
-    color: #fff;
-
     position: relative;
     z-index: 3;
 
     display: flex;
     overflow: hidden;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     padding: 0 100px 70px;
 
+    color: #fff;
     border-radius: 60px 60px 0 0;
     background: #141414;
-
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 
@@ -796,11 +789,10 @@ button
     line-height: 130%;
 
     display: flex;
-
-    justify-content: space-between;
-    align-items: center;
     align-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
@@ -881,11 +873,10 @@ button
 .whoami .data
 {
     display: flex;
-
-    justify-content: space-between;
-    align-items: stretch;
     align-content: stretch;
+    align-items: stretch;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
@@ -961,11 +952,11 @@ button
 --------------*/
 .networks .row
 {
+    align-content: stretch;
+    align-items: stretch;
+
     margin-bottom: -40px;
     margin-left: -16px;
-
-    align-items: stretch;
-    align-content: stretch;
 }
 
 .networks .row > *
@@ -981,6 +972,7 @@ button
     position: relative;
 
     display: flex;
+    flex-direction: column;
 
     padding: 20px 16px;
 
@@ -988,11 +980,16 @@ button
 
     border-radius: 20px;
     background: #282828;
+}
 
-    justify-content: flex-start;
-    align-items: flex-start;
+
+.networks .item .head
+{
+    display: flex;
     align-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 
@@ -1000,12 +997,12 @@ button
 {
     position: relative;
 
+    align-self: center;
+
     width: 60px;
     height: 60px;
 
     border-radius: 50%;
-
-    align-self: center;
 }
 
 .networks .item .logo.bg_white
@@ -1042,7 +1039,6 @@ button
 
 .networks .item .place
 {
-    color: #fff;
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
@@ -1057,6 +1053,7 @@ button
 
     text-align: center;
 
+    color: #fff;
     border-radius: 140px;
     background: #950fff;
 
@@ -1070,10 +1067,10 @@ button
     font-weight: 600;
     line-height: 26px;
 
+    align-self: center;
+
     width: calc(100% - 208px);
     margin-left: 12px;
-
-    align-self: center;
 }
 
 .networks .item .coming_soon + .name
@@ -1084,7 +1081,6 @@ button
 
 .networks .item .coming_soon
 {
-    color: #000;
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
@@ -1097,6 +1093,7 @@ button
 
     white-space: nowrap;
 
+    color: #000;
     border-radius: 20px;
     background: #fff;
 }
@@ -1108,6 +1105,11 @@ button
     line-height: 16px;
 
     display: flex;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     min-width: 90px;
     margin-left: auto;
@@ -1120,22 +1122,18 @@ button
     border-radius: 25px;
     background: #353535;
 
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
     font-feature-settings: 'pnum' on, 'lnum' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'ss11' on;
 }
 
 .networks .item .apr span
 {
-    color: #950fff;
     font-size: var(--font_size);
     font-weight: 600;
     line-height: 19px;
 
     margin-left: 6px;
+
+    color: #950fff;
 }
 
 .networks .item .apr i
@@ -1147,6 +1145,8 @@ button
 .networks .item .desc
 {
     line-height: 150%;
+
+    flex: 1 0 auto;
 
     width: 100%;
     margin-top: 20px;
@@ -1166,11 +1166,10 @@ button
 .networks .item .features > *
 {
     display: flex;
-
-    justify-content: space-between;
-    align-items: center;
     align-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .networks .item .features > * + *
@@ -1208,10 +1207,11 @@ button
 
 .networks .item .btn
 {
-    color: var(--text_color);
     font-weight: 600;
     line-height: 19px;
 
+    width: 205px;
+    max-width: 100%;
     margin-top: 30px;
     padding: 17px 30px;
 
@@ -1219,6 +1219,7 @@ button
     text-align: center;
     text-decoration: none;
 
+    color: var(--text_color);
     border-radius: 140px;
     background: #353535;
 }
@@ -1232,7 +1233,6 @@ button
 .networks .item:hover
 {
     color: #000;
-
     background: #fff;
 }
 
@@ -1253,11 +1253,11 @@ button
 --------------*/
 .projects .row
 {
+    align-content: stretch;
+    align-items: stretch;
+
     margin-bottom: -10px;
     margin-left: -10px;
-
-    align-items: stretch;
-    align-content: stretch;
 }
 
 .projects .row > *
@@ -1304,20 +1304,18 @@ button
 
 .projects .project .link > span.hammer
 {
-    color: #fff;
-
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     margin-left: 10px;
     padding: 12px 20px;
 
+    color: #fff;
     border-radius: 40px;
     background: #353535;
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 .projects .project .link > span.hammer svg
@@ -1328,22 +1326,20 @@ button
 
 .projects .project .link a
 {
-    color: currentColor;
-
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     padding: 17px 30px;
 
     transition: background .2s linear;
     text-decoration: none;
 
+    color: currentColor;
     border-radius: 40px;
     background: #353535;
-
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 
@@ -1409,15 +1405,14 @@ button
 .projects .project .tags
 {
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     margin-top: 20px;
     margin-bottom: -6px;
     margin-left: -6px;
-
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 .projects .project .tags > *
@@ -1441,11 +1436,11 @@ button
 ----------*/
 .blog .row
 {
+    align-content: stretch;
+    align-items: stretch;
+
     margin-bottom: -16px;
     margin-left: -16px;
-
-    align-items: stretch;
-    align-content: stretch;
 }
 
 .blog .row > *
@@ -1468,8 +1463,6 @@ button
 
 .blog .item
 {
-    color: var(--text_color);
-
     display: flex;
     flex-direction: column;
 
@@ -1477,6 +1470,7 @@ button
 
     text-decoration: none;
 
+    color: var(--text_color);
     border-radius: 20px;
     background: #282828;
 }
@@ -1489,16 +1483,15 @@ button
     line-height: 150%;
 
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     margin-top: auto;
 
     text-align: center;
     word-break: break-all;
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 
@@ -1524,7 +1517,6 @@ button
 
 .blog .item .title
 {
-    color: currentColor;
     font-size: 22px;
     font-weight: 600;
     line-height: 150%;
@@ -1537,6 +1529,8 @@ button
     transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
+
+    color: currentColor;
 }
 
 .blog .item .title:empty
@@ -1559,10 +1553,9 @@ button
     position: relative;
 
     overflow: hidden;
+    flex: 1 0 auto;
 
     height: 72px;
-
-    flex: 1 0 auto;
 }
 
 .blog .item .desc > *
@@ -1617,23 +1610,21 @@ button
 
 .partners .item
 {
-    color: var(--text_color);
-
     display: flex;
     overflow: hidden;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     height: 180px;
     padding: 10px;
 
     text-decoration: none;
 
+    color: var(--text_color);
     border-radius: 50px;
     background: #000;
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 .partners .item img
@@ -1658,17 +1649,16 @@ button
 .contacts .data
 {
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     padding: 70px 100px;
 
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
     background: #950fff;
-
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 .contacts .data:before
@@ -1703,24 +1693,23 @@ button
 .contacts .socials
 {
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     margin-left: auto;
-
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 
 .contacts .socials a
 {
-    color: currentColor;
-
     display: block;
 
     transition: opacity .2s linear;
     text-decoration: none;
+
+    color: currentColor;
 
     --color2: #950fff;
 }
@@ -1767,25 +1756,24 @@ button
 
 .back .link
 {
-    color: #fff;
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
 
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     padding: 17px 30px;
 
     transition: background .2s linear;
     text-decoration: none;
 
+    color: #fff;
     border-radius: 140px;
     background: #141414;
-
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 .back .link svg
@@ -1810,15 +1798,14 @@ button
 .article_info .info
 {
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     width: 1005px;
     max-width: 100%;
     margin: 0 auto;
-
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 
@@ -1871,26 +1858,24 @@ button
 .article_info .prev_link,
 .article_info .next_link
 {
-    color: #fff;
-
     position: absolute;
     top: 72px;
     left: 112px;
 
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     width: 80px;
     height: 80px;
 
     transition: .2s linear;
 
+    color: #fff;
     border: 1px solid #282828;
     border-radius: 50%;
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 .article_info .next_link
@@ -1916,7 +1901,6 @@ button
 .article_info .next_link:hover
 {
     color: #000;
-
     border-color: #fff;
     background: #fff;
 }
@@ -1934,14 +1918,14 @@ button
 ----------------*/
 .error_info
 {
-    color: #fff;
-
     position: relative;
     z-index: 3;
 
     padding: 12px 0 124px;
 
     text-align: center;
+
+    color: #fff;
 }
 
 
