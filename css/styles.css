@@ -1390,17 +1390,6 @@ button
     object-fit: cover;
 }
 
-.projects .project .thumb img.monitor
-{
-    left: -30px;
-
-    width: calc(100% + 60px);
-    min-width: 100%;
-    min-height: 100%;
-
-    border-radius: 0 !important;
-}
-
 
 .projects .project .tags
 {
