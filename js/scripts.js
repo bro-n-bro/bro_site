@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Fetch API
 	(async () => {
 		try {
-			await fetch('https://rpc.bronbro.io/bro_data/')
+			await fetch('https://rpc.bronbro.io/networks/')
 				.then(response => response.json())
 				.then(data => {
 					// Networks validated
@@ -371,18 +371,18 @@ const ATOMInit = async () => {
 			maxTokens = 0,
 			persents = 0
 
-		const currentPromise = await fetch('https://lcd.cosmoshub-4.bronbro.io/staking/validators/cosmosvaloper106yp7zw35wftheyyv9f9pe69t8rteumjrx52jg')
+		const currentPromise = await fetch('https://lcd.cosmoshub-4.bronbro.io/cosmos/staking/v1beta1/validators/cosmosvaloper106yp7zw35wftheyyv9f9pe69t8rteumjrx52jg')
 			.then(response => response.json())
 			.then(data => {
-				currentTokens = data.result.tokens / 1000000
+				currentTokens = data.validator.tokens / 1000000
 
 				ATOMInfo.querySelector('.progress .current').textContent = parseInt(currentTokens).toLocaleString()
 			})
 
-		const maxPromise = await fetch('https://lcd.cosmoshub-4.bronbro.io/staking/validators?status=BOND_STATUS_BONDED&page=1&limit=175')
+		const maxPromise = await fetch('https://lcd.cosmoshub-4.bronbro.io/cosmos/staking/v1beta1/validators?status=BOND_STATUS_BONDED&pagination.limit=175')
 			.then(response => response.json())
 			.then(data => {
-				let tokensArr = data.result.map(el => el.tokens),
+				let tokensArr = data.validators.map(el => el.tokens),
 					sepPostion = tokensArr.sort((a, b) => b - a)[174] / tokensArr.sort((a, b) => b - a)[49]
 
 				maxTokens = tokensArr.sort((a, b) => b - a)[49] / 1000000
