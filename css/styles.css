@@ -1213,10 +1213,11 @@ button
     width: 205px;
     max-width: 100%;
     margin-top: 30px;
-    padding: 17px 30px;
+    padding: 17px;
 
     transition: background .2s linear;
     text-align: center;
+    white-space: nowrap;
     text-decoration: none;
 
     color: var(--text_color);
