@@ -169,6 +169,7 @@ html
     min-height:         fill-available;
 }
 
+
 html.custom_scroll ::-webkit-scrollbar
 {
     width: 8px;
@@ -177,16 +178,11 @@ html.custom_scroll ::-webkit-scrollbar
     background-color: var(--bg);
 }
 
+
 html.custom_scroll ::-webkit-scrollbar-thumb
 {
     border-radius: 5px;
     background-color: #950fff;
-}
-
-html.custom_scroll
-{
-    scrollbar-color: #950fff var(--bg);
-    scrollbar-width: thin;
 }
 
 
